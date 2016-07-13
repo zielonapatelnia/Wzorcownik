@@ -5,11 +5,14 @@ import javax.swing.JTextField;
 
 public class LayoutPoleTrójkąt {
 	
+	
+	JLabel jlNagłówek, jlWynik;
+	JButton jbOblicz;
+	JTextField jtfWynik, jtfWartość1;
+	
 	public LayoutPoleTrójkąt()
 	{
-		JLabel jlNagłówek, jlWynik;
-		JButton jbOblicz;
-		JTextField jtfWynik, jtfWartość1;
+		
 		
 		JFrame oknoMiPoleTrójkąt = new JFrame();
 		oknoMiPoleTrójkąt.setLayout(null);
