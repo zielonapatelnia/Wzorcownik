@@ -1,9 +1,12 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class LayoutPoleTrójkąt {
+public class LayoutPoleTrójkąt implements ActionListener{
 	
 	
 	JLabel jlNagłówek, jlWynik;
@@ -35,6 +38,7 @@ public class LayoutPoleTrójkąt {
 		jbOblicz = new JButton("Oblicz !");
 		jbOblicz.setBounds(50, 150, 300, 40);
 		oknoMiPoleTrójkąt.add(jbOblicz);
+		jbOblicz.addActionListener(this);
 		
 		jlWynik = new JLabel("Wynik");
 		jlWynik.setBounds(180, 210, 100, 20);
@@ -45,6 +49,31 @@ public class LayoutPoleTrójkąt {
 		oknoMiPoleTrójkąt.add(jtfWynik);
 		
 	}
+	
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object z = e.getSource();
+		
+		if (z == jbOblicz)
+		{
+			double b = Double.parseDouble(jtfWartość1.getText());
+			
+			ObliczaniePoleTrójkąt obiekt = new ObliczaniePoleTrójkąt(b);
+			String rozwiązanie = obiekt.rozwiązaniePoleTrójkąt();
+			jtfWynik.setText(rozwiązanie);
+			
+			
+			
+		}
+		
+		
+
+		
+	}
+
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
