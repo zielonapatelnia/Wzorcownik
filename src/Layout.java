@@ -11,6 +11,21 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import com.zielomapatelnia.layout.LayoutObwódKoło;
+import com.zielomapatelnia.layout.LayoutObwódKwadrat;
+import com.zielomapatelnia.layout.LayoutObwódProstokąt;
+import com.zielomapatelnia.layout.LayoutObwódRomb;
+import com.zielomapatelnia.layout.LayoutObwódRównoległobok;
+import com.zielomapatelnia.layout.LayoutObwódTrapez;
+import com.zielomapatelnia.layout.LayoutObwódTrójkąt;
+import com.zielomapatelnia.layout.LayoutPoleKoło;
+import com.zielomapatelnia.layout.LayoutPoleKwadrat;
+import com.zielomapatelnia.layout.LayoutPoleProstokąt;
+import com.zielomapatelnia.layout.LayoutPoleRomb;
+import com.zielomapatelnia.layout.LayoutPoleRównoległobok;
+import com.zielomapatelnia.layout.LayoutPoleTrapez;
+import com.zielomapatelnia.layout.LayoutPoleTrójkąt;
+
 
 public class Layout extends JFrame implements ActionListener {
 
