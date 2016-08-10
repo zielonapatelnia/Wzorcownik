@@ -1,17 +1,24 @@
 package com.zielomapatelnia.layout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class LayoutObwódRównoległobok {
+import com.zielonapatelnia.math.ObliczanieObwódRównoległoboku;
+
+public class LayoutObwódRównoległobok implements ActionListener {
+	
+	JLabel jlNagłówek, jlWynik;
+	JButton jbOblicz;
+	JTextField jtfWynik, jtfWartość1, jtfWartość2;
 	
 	public LayoutObwódRównoległobok()
 	{
 		
-		JLabel jlNagłówek, jlWynik;
-		JButton jbOblicz;
-		JTextField jtfWynik, jtfWartość1, jtfWartość2;
+	
 		
 		JFrame oknoMiObwódRównoległobok = new JFrame();
 		oknoMiObwódRównoległobok.setLayout(null);
@@ -38,6 +45,7 @@ public class LayoutObwódRównoległobok {
 		jbOblicz = new JButton("Oblicz !");
 		jbOblicz.setBounds(50, 150, 300, 40);
 		oknoMiObwódRównoległobok.add(jbOblicz);
+		jbOblicz.addActionListener(this);
 		
 		jlWynik = new JLabel("Wynik");
 		jlWynik.setBounds(180, 210, 100, 20);
@@ -47,6 +55,30 @@ public class LayoutObwódRównoległobok {
 		jtfWynik.setBounds(150, 260, 100, 40);
 		oknoMiObwódRównoległobok.add(jtfWynik);
 	}
+	
+	
+
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		Object z = e.getSource();
+		
+		if (z == jbOblicz)
+		{
+			double a = Double.parseDouble(jtfWartość1.getText());
+			double b = Double.parseDouble(jtfWartość2.getText());
+			
+			ObliczanieObwódRównoległoboku obiekt = new ObliczanieObwódRównoległoboku(a,b);
+			String rozwiązanie = obiekt.rozwiązanieObwódRównoległoboku();
+			jtfWynik.setText(rozwiązanie);
+			
+			
+			
+		}
+		
+	}
+
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

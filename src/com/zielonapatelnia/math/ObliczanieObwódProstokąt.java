@@ -4,6 +4,7 @@ public class ObliczanieObwódProstokąt {
 	
 	double a,b;
 	
+	
 	public ObliczanieObwódProstokąt(double a, double b)
 	{
 		this.a = a;
@@ -19,6 +20,7 @@ public class ObliczanieObwódProstokąt {
 			rozwiązanie = ("" + p);
 			
 			return rozwiązanie;
+			
 	}
 
 	public static void main(String[] args) {
@@ -26,4 +28,6 @@ public class ObliczanieObwódProstokąt {
 
 	}
 
+	
+	
 }
