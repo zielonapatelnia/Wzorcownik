@@ -140,7 +140,7 @@ public class Layout extends JFrame implements ActionListener {
 
 		if ( z == miOProjekcie)
 		{
-			JOptionPane.showMessageDialog(this, "                                           Cześć \n Mam na imię Krzysiek, jest to mój pierwszy projekt w Javie z użyciem GUI \n                                  Pozdrawiam","O Projekcie", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this, "                                           Cześć \n Mam na imię Krzysiek, jest to mój pierwszy projekt w Javie z użyciem Swinga \n                                  Pozdrawiam","O Projekcie", JOptionPane.INFORMATION_MESSAGE);
 		}
 		else if (z == miPoleKoło)
 		{

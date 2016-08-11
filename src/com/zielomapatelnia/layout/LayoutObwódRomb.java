@@ -1,16 +1,23 @@
 package com.zielomapatelnia.layout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class LayoutObwódRomb {
+import com.zielonapatelnia.math.ObliczanieObwódRomb;
+
+public class LayoutObwódRomb implements ActionListener {
+	
+	JLabel jlNagłówek, jlWynik;
+	JButton jbOblicz;
+	JTextField jtfWynik, jtfWartość1;
 	
 	public LayoutObwódRomb()
 	{
-		JLabel jlNagłówek, jlWynik;
-		JButton jbOblicz;
-		JTextField jtfWynik, jtfWartość1;
+		
 		
 		JFrame oknoMiObwódRomb = new JFrame();
 		oknoMiObwódRomb.setLayout(null);
@@ -35,6 +42,7 @@ public class LayoutObwódRomb {
 		jbOblicz = new JButton("Oblicz !");
 		jbOblicz.setBounds(50, 150, 300, 40);
 		oknoMiObwódRomb.add(jbOblicz);
+		jbOblicz.addActionListener(this);
 		
 		jlWynik = new JLabel("Wynik");
 		jlWynik.setBounds(180, 210, 100, 20);
@@ -44,6 +52,28 @@ public class LayoutObwódRomb {
 		jtfWynik.setBounds(150, 260, 100, 40);
 		oknoMiObwódRomb.add(jtfWynik);
 	}
+
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+			Object z = e.getSource();
+			
+			if (z == jbOblicz)
+			{
+				double a = Double.parseDouble(jtfWartość1.getText());
+				
+				ObliczanieObwódRomb obiekt = new ObliczanieObwódRomb(a);
+				String wynik = obiekt.obliczanieObwódRomb();
+				jtfWynik.setText(wynik);
+				
+				
+			}
+		
+	}
+
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
