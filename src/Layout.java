@@ -30,9 +30,9 @@ import com.zielomapatelnia.layout.LayoutPoleTrójkąt;
 public class Layout extends JFrame implements ActionListener {
 
  private	JMenuBar menuBar;
-	private JMenu mPlik , mFiguryPłaskie, mPomoc; 
-	private JMenu mKoło, mKwadrat, mProstokąt, mTrójkąt, mRównoległobok, mRomb, mTrapez ;
-	private JMenuItem miOProjekcie, miWyjście, miPoleKoło, miObwódKoło, miPoleKwadrat, miObwódKwadrat, miPoleProstokąt, miObwódProstokąt, miPoleTrójkąt, miObwódTrójkąt, miPoleRównoległobok, miObwódRównoległobok,miPoleRomb,miObwódRomb,miPoleTrapez,miObwódTrapez;
+	private JMenu mFile , mFlatFigure, mHelp; 
+	private JMenu mCircle, mQuadrat, mRectangle, mTriangle, mParallelogram, mRhombus, mTrapeze ;
+	private JMenuItem miAboutProject, miExit, miFieldCircle, miCircuitCircle, miFieldQuadrat, miCircuitQuadreat, miFieldRectangle, miCircuitRectangle, miPoleTrójkąt, miObwódTrójkąt, miPoleRównoległobok, miObwódRównoległobok,miPoleRomb,miObwódRomb,miPoleTrapez,miObwódTrapez;
 	
 	
 	
@@ -48,75 +48,75 @@ public class Layout extends JFrame implements ActionListener {
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
 		
-		mPlik = new JMenu("Plik");
-		menuBar.add(mPlik);
-		mFiguryPłaskie = new JMenu("Figury Płaskie");
-		menuBar.add(mFiguryPłaskie);
-		mPomoc = new JMenu("Pomoc");
-		menuBar.add(mPomoc);
+		mFile = new JMenu("Plik");
+		menuBar.add(mFile);
+		mFlatFigure = new JMenu("Figury Płaskie");
+		menuBar.add(mFlatFigure);
+		mHelp = new JMenu("Pomoc");
+		menuBar.add(mHelp);
 		
 		
 		
-		miWyjście = new JMenuItem("Wyjscie");
-		mPlik.addSeparator();
-		mPlik.add(miWyjście);
+		miExit = new JMenuItem("Wyjscie");
+		mFile.addSeparator();
+		mFile.add(miExit);
 		
-		miOProjekcie = new JMenuItem("O Projekcie");
-		mPomoc.add(miOProjekcie);
-		miOProjekcie.addActionListener(this);
+		miAboutProject = new JMenuItem("O Projekcie");
+		mHelp.add(miAboutProject);
+		miAboutProject.addActionListener(this);
 		
-		mKoło = new JMenu("Koło");
-		mFiguryPłaskie.add(mKoło);
-		mKwadrat = new JMenu("Kwadrat");
-		mFiguryPłaskie.add(mKwadrat);
-		mProstokąt = new JMenu("Prostokąt");
-		mFiguryPłaskie.add(mProstokąt);
-		mTrójkąt = new JMenu("Trójkąt");
-		mFiguryPłaskie.add(mTrójkąt);
-		mRównoległobok = new JMenu("Równoległobok");
-		mFiguryPłaskie.add(mRównoległobok);
-		mRomb = new JMenu("Romb");
-		mFiguryPłaskie.add(mRomb);
-		mTrapez = new JMenu("Trapez");
-		mFiguryPłaskie.add(mTrapez);
+		mCircle = new JMenu("Koło");
+		mFlatFigure.add(mCircle);
+		mQuadrat = new JMenu("Kwadrat");
+		mFlatFigure.add(mQuadrat);
+		mRectangle = new JMenu("Prostokąt");
+		mFlatFigure.add(mRectangle);
+		mTriangle = new JMenu("Trójkąt");
+		mFlatFigure.add(mTriangle);
+		mParallelogram = new JMenu("Równoległobok");
+		mFlatFigure.add(mParallelogram);
+		mRhombus = new JMenu("Romb");
+		mFlatFigure.add(mRhombus);
+		mTrapeze = new JMenu("Trapez");
+		mFlatFigure.add(mTrapeze);
 		
-		miPoleKoło = new JMenuItem("Oblicz pola koła");
-		mKoło.add(miPoleKoło);
-		miObwódKoło = new JMenuItem("Oblicz obwodu koła");
-		mKoło.add(miObwódKoło);
-		miPoleKwadrat = new JMenuItem("Oblicz pole kwadratu");
-		mKwadrat.add(miPoleKwadrat);
-		miObwódKwadrat = new JMenuItem("Oblicz obwód kwadratu");
-		mKwadrat.add(miObwódKwadrat);
-		miPoleProstokąt = new JMenuItem("Oblicz pole prostokąta");
-		mProstokąt.add(miPoleProstokąt);
-		miObwódProstokąt = new JMenuItem("Oblicz obwód prostokąta");
-		mProstokąt.add(miObwódProstokąt);
+		miFieldCircle = new JMenuItem("Oblicz pola koła");
+		mCircle.add(miFieldCircle);
+		miCircuitCircle = new JMenuItem("Oblicz obwodu koła");
+		mCircle.add(miCircuitCircle);
+		miFieldQuadrat = new JMenuItem("Oblicz pole kwadratu");
+		mQuadrat.add(miFieldQuadrat);
+		miCircuitQuadreat = new JMenuItem("Oblicz obwód kwadratu");
+		mQuadrat.add(miCircuitQuadreat);
+		miFieldRectangle = new JMenuItem("Oblicz pole prostokąta");
+		mRectangle.add(miFieldRectangle);
+		miCircuitRectangle = new JMenuItem("Oblicz obwód prostokąta");
+		mRectangle.add(miCircuitRectangle);
 		miPoleTrójkąt = new JMenuItem("Oblicz pole trójkąta");
-		mTrójkąt.add(miPoleTrójkąt);
+		mTriangle.add(miPoleTrójkąt);
 		miObwódTrójkąt = new JMenuItem("Oblicz obwód trójkąta");
-		mTrójkąt.add(miObwódTrójkąt);
+		mTriangle.add(miObwódTrójkąt);
 		miPoleRównoległobok = new JMenuItem("Oblicz pole równoległoboku");
-		mRównoległobok.add(miPoleRównoległobok);
+		mParallelogram.add(miPoleRównoległobok);
 		miObwódRównoległobok = new JMenuItem("Oblicz obwód równoległoboku");
-		mRównoległobok.add(miObwódRównoległobok);
+		mParallelogram.add(miObwódRównoległobok);
 		miPoleRomb = new JMenuItem("Oblicz pole rombu");
-		mRomb.add(miPoleRomb);
+		mRhombus.add(miPoleRomb);
 		miObwódRomb = new JMenuItem("Oblicz obwód rombu");
-		mRomb.add(miObwódRomb);
+		mRhombus.add(miObwódRomb);
 		miPoleTrapez = new JMenuItem("Oblicz pole trapezu");
-		mTrapez.add(miPoleTrapez);
+		mTrapeze.add(miPoleTrapez);
 		miObwódTrapez = new JMenuItem("Oblicz obwód trapezu");
-		mTrapez.add(miObwódTrapez);
+		mTrapeze.add(miObwódTrapez);
 		
 		
 		
-		miPoleKoło.addActionListener(this);
-		miObwódKoło.addActionListener(this);
-		miPoleKwadrat.addActionListener(this);
-		miObwódKwadrat.addActionListener(this);
-		miPoleProstokąt.addActionListener(this);
-		miObwódProstokąt.addActionListener(this);
+		miFieldCircle.addActionListener(this);
+		miCircuitCircle.addActionListener(this);
+		miFieldQuadrat.addActionListener(this);
+		miCircuitQuadreat.addActionListener(this);
+		miFieldRectangle.addActionListener(this);
+		miCircuitRectangle.addActionListener(this);
 		miPoleTrójkąt.addActionListener(this);
 		miObwódTrójkąt.addActionListener(this);
 		miPoleRównoległobok.addActionListener(this);
@@ -125,7 +125,7 @@ public class Layout extends JFrame implements ActionListener {
 		miObwódRomb.addActionListener(this);
 		miPoleTrapez.addActionListener(this);
 		miObwódTrapez.addActionListener(this);
-		miWyjście.addActionListener(this);
+		miExit.addActionListener(this);
 	}
 	
 	
@@ -138,40 +138,40 @@ public class Layout extends JFrame implements ActionListener {
 		
 		
 
-		if ( z == miOProjekcie)
+		if ( z == miAboutProject)
 		{
 			JOptionPane.showMessageDialog(this, "                                           Cześć \n Mam na imię Krzysiek, jest to mój pierwszy projekt w Javie z użyciem Swinga \n                                  Pozdrawiam","O Projekcie", JOptionPane.INFORMATION_MESSAGE);
 		}
-		else if (z == miPoleKoło)
+		else if (z == miFieldCircle)
 		{
 		LayoutPoleKoło obiekt = new LayoutPoleKoło();
 		
 		}
-		else if (z == miObwódKoło)
+		else if (z == miCircuitCircle)
 		{
 		LayoutObwódKoło obiekt = new LayoutObwódKoło();
 		
 		} 
-		else if (z == miPoleKwadrat)
+		else if (z == miFieldQuadrat)
 		{
 			LayoutPoleKwadrat obiekt = new LayoutPoleKwadrat();
 			
 			
 			
 		} 
-		else if (z == miObwódKwadrat)
+		else if (z == miCircuitQuadreat)
 		{
 			LayoutObwódKwadrat obiekt = new LayoutObwódKwadrat();
 			
 			
 		}
-		else if (z == miPoleProstokąt)
+		else if (z == miFieldRectangle)
 		{
 			LayoutPoleProstokąt obiekt = new LayoutPoleProstokąt();
 			
 			
 		}
-		else if (z == miObwódProstokąt)
+		else if (z == miCircuitRectangle)
 		{
 			
 			
@@ -225,7 +225,7 @@ public class Layout extends JFrame implements ActionListener {
 			
 		}
 		
-		else if (z == miWyjście)
+		else if (z == miExit)
 		{
 			dispose();
 		}
