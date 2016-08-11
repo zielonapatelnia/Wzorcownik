@@ -6,16 +6,20 @@ import javax.swing.JTextField;
 
 public class LayoutObwódTrapez {
 
+	
+	JLabel jlNagłówek, jlWynik;
+	JButton jbOblicz;
+	JTextField jtfWynik, jtfWartość1,jtfWartość2, jtfWartość3, jtfWartość4;
+	
+	
 	public LayoutObwódTrapez()
 	{
-		JLabel jlNagłówek, jlWynik;
-		JButton jbOblicz;
-		JTextField jtfWynik, jtfWartość1,jtfWartość2, jtfWartość3, jtfWartość4;
+		
 		
 		
 		JFrame oknoMiObwódTrapzez = new JFrame();
 		oknoMiObwódTrapzez.setLayout(null);
-		oknoMiObwódTrapzez.setSize(400, 400);
+		oknoMiObwódTrapzez.setSize(450, 400);
 		oknoMiObwódTrapzez.setTitle("Obliczanie obwodu trapeza");
 		oknoMiObwódTrapzez.setDefaultCloseOperation(1);
 		oknoMiObwódTrapzez.setVisible(true);	
@@ -38,6 +42,7 @@ public class LayoutObwódTrapez {
 		
 		jtfWartość4 = new JTextField();
 		jtfWartość4.setBounds(350, 60, 70, 40);
+		oknoMiObwódTrapzez.add(jtfWartość4);
 		
 		jbOblicz = new JButton("Oblicz !");
 		jbOblicz.setBounds(50, 150, 300, 40);
