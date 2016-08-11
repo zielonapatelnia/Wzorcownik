@@ -9,13 +9,13 @@ import javax.swing.JTextField;
 
 import com.zielonapatelnia.math.ObliczanieObwódKoło;
 
-public class LayoutObwódKoło implements ActionListener {
+public class LayoutCircuitCircle implements ActionListener {
 
 	JLabel jlNagłówek, jlWynik;
 	JButton jbOblicz;
 	JTextField jtfWynik, jtfWartość;
 	
-	public LayoutObwódKoło()
+	public LayoutCircuitCircle()
 	{
 	
 	
@@ -77,9 +77,6 @@ public class LayoutObwódKoło implements ActionListener {
 
 
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }

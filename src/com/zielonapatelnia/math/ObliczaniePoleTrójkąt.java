@@ -22,9 +22,5 @@ public class ObliczaniePoleTrójkąt {
 		return rozwiązanie;
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 }

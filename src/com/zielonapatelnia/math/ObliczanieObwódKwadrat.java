@@ -22,9 +22,6 @@ public class ObliczanieObwódKwadrat {
 	}
 	
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }

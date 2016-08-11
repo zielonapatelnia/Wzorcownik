@@ -11,7 +11,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import com.zielomapatelnia.layout.LayoutObwódKoło;
+import com.zielomapatelnia.layout.LayoutCircuitCircle;
 import com.zielomapatelnia.layout.LayoutObwódKwadrat;
 import com.zielomapatelnia.layout.LayoutObwódProstokąt;
 import com.zielomapatelnia.layout.LayoutObwódRomb;
@@ -29,10 +29,12 @@ import com.zielomapatelnia.layout.LayoutPoleTrójkąt;
 
 public class Layout extends JFrame implements ActionListener {
 
- private	JMenuBar menuBar;
+private	JMenuBar menuBar;
 	private JMenu mFile , mFlatFigure, mHelp; 
 	private JMenu mCircle, mQuadrat, mRectangle, mTriangle, mParallelogram, mRhombus, mTrapeze ;
-	private JMenuItem miAboutProject, miExit, miFieldCircle, miCircuitCircle, miFieldQuadrat, miCircuitQuadreat, miFieldRectangle, miCircuitRectangle, miPoleTrójkąt, miObwódTrójkąt, miPoleRównoległobok, miObwódRównoległobok,miPoleRomb,miObwódRomb,miPoleTrapez,miObwódTrapez;
+	private JMenuItem miAboutProject, miExit, miFieldCircle, miCircuitCircle, miFieldQuadrat, miCircuitQuadreat, miFieldRectangle,
+	miCircuitRectangle, miFieldTriangle, miCircuitTriangle, miFieldParallelogram, miCircuitParallelogram,miFieldRhombus,miCircuitRhombus,
+	miFieldTrapeze,miCircuitTrapeze;
 	
 	
 	
@@ -92,22 +94,22 @@ public class Layout extends JFrame implements ActionListener {
 		mRectangle.add(miFieldRectangle);
 		miCircuitRectangle = new JMenuItem("Oblicz obwód prostokąta");
 		mRectangle.add(miCircuitRectangle);
-		miPoleTrójkąt = new JMenuItem("Oblicz pole trójkąta");
-		mTriangle.add(miPoleTrójkąt);
-		miObwódTrójkąt = new JMenuItem("Oblicz obwód trójkąta");
-		mTriangle.add(miObwódTrójkąt);
-		miPoleRównoległobok = new JMenuItem("Oblicz pole równoległoboku");
-		mParallelogram.add(miPoleRównoległobok);
-		miObwódRównoległobok = new JMenuItem("Oblicz obwód równoległoboku");
-		mParallelogram.add(miObwódRównoległobok);
-		miPoleRomb = new JMenuItem("Oblicz pole rombu");
-		mRhombus.add(miPoleRomb);
-		miObwódRomb = new JMenuItem("Oblicz obwód rombu");
-		mRhombus.add(miObwódRomb);
-		miPoleTrapez = new JMenuItem("Oblicz pole trapezu");
-		mTrapeze.add(miPoleTrapez);
-		miObwódTrapez = new JMenuItem("Oblicz obwód trapezu");
-		mTrapeze.add(miObwódTrapez);
+		miFieldTriangle = new JMenuItem("Oblicz pole trójkąta");
+		mTriangle.add(miFieldTriangle);
+		miCircuitTriangle = new JMenuItem("Oblicz obwód trójkąta");
+		mTriangle.add(miCircuitTriangle);
+		miFieldParallelogram = new JMenuItem("Oblicz pole równoległoboku");
+		mParallelogram.add(miFieldParallelogram);
+		miCircuitParallelogram = new JMenuItem("Oblicz obwód równoległoboku");
+		mParallelogram.add(miCircuitParallelogram);
+		miFieldRhombus = new JMenuItem("Oblicz pole rombu");
+		mRhombus.add(miFieldRhombus);
+		miCircuitRhombus = new JMenuItem("Oblicz obwód rombu");
+		mRhombus.add(miCircuitRhombus);
+		miFieldTrapeze = new JMenuItem("Oblicz pole trapezu");
+		mTrapeze.add(miFieldTrapeze);
+		miCircuitTrapeze = new JMenuItem("Oblicz obwód trapezu");
+		mTrapeze.add(miCircuitTrapeze);
 		
 		
 		
@@ -117,14 +119,14 @@ public class Layout extends JFrame implements ActionListener {
 		miCircuitQuadreat.addActionListener(this);
 		miFieldRectangle.addActionListener(this);
 		miCircuitRectangle.addActionListener(this);
-		miPoleTrójkąt.addActionListener(this);
-		miObwódTrójkąt.addActionListener(this);
-		miPoleRównoległobok.addActionListener(this);
-		miObwódRównoległobok.addActionListener(this);
-		miPoleRomb.addActionListener(this);
-		miObwódRomb.addActionListener(this);
-		miPoleTrapez.addActionListener(this);
-		miObwódTrapez.addActionListener(this);
+		miFieldTriangle.addActionListener(this);
+		miCircuitTriangle.addActionListener(this);
+		miFieldParallelogram.addActionListener(this);
+		miCircuitParallelogram.addActionListener(this);
+		miFieldRhombus.addActionListener(this);
+		miCircuitRhombus.addActionListener(this);
+		miFieldTrapeze.addActionListener(this);
+		miCircuitTrapeze.addActionListener(this);
 		miExit.addActionListener(this);
 	}
 	
@@ -144,30 +146,30 @@ public class Layout extends JFrame implements ActionListener {
 		}
 		else if (z == miFieldCircle)
 		{
-		LayoutPoleKoło obiekt = new LayoutPoleKoło();
+		LayoutPoleKoło frame = new LayoutPoleKoło();
 		
 		}
 		else if (z == miCircuitCircle)
 		{
-		LayoutObwódKoło obiekt = new LayoutObwódKoło();
+		LayoutCircuitCircle frame = new LayoutCircuitCircle();
 		
 		} 
 		else if (z == miFieldQuadrat)
 		{
-			LayoutPoleKwadrat obiekt = new LayoutPoleKwadrat();
+			LayoutPoleKwadrat frame = new LayoutPoleKwadrat();
 			
 			
 			
 		} 
 		else if (z == miCircuitQuadreat)
 		{
-			LayoutObwódKwadrat obiekt = new LayoutObwódKwadrat();
+			LayoutObwódKwadrat frame = new LayoutObwódKwadrat();
 			
 			
 		}
 		else if (z == miFieldRectangle)
 		{
-			LayoutPoleProstokąt obiekt = new LayoutPoleProstokąt();
+			LayoutPoleProstokąt frame = new LayoutPoleProstokąt();
 			
 			
 		}
@@ -175,53 +177,53 @@ public class Layout extends JFrame implements ActionListener {
 		{
 			
 			
-			LayoutObwódProstokąt obiekt = new LayoutObwódProstokąt();
+			LayoutObwódProstokąt frame = new LayoutObwódProstokąt();
 			
 		}
-		else if (z == miPoleTrójkąt)
+		else if (z == miFieldTriangle)
 		{
-			LayoutPoleTrójkąt obiekt = new LayoutPoleTrójkąt();
+			LayoutPoleTrójkąt frame = new LayoutPoleTrójkąt();
 		}
-		else if (z == miObwódTrójkąt)
+		else if (z == miCircuitTriangle)
 		{
-			LayoutObwódTrójkąt obiekt = new LayoutObwódTrójkąt();
+			LayoutObwódTrójkąt frame = new LayoutObwódTrójkąt();
 			
 		}
-		else if (z == miPoleRównoległobok)
+		else if (z == miFieldParallelogram)
 		{
-			LayoutPoleRównoległobok obiekt = new LayoutPoleRównoległobok();
+			LayoutPoleRównoległobok frame = new LayoutPoleRównoległobok();
 			
 		}
-		else if (z == miObwódRównoległobok)
+		else if (z == miCircuitParallelogram)
 		{
-			LayoutObwódRównoległobok obiekt = new LayoutObwódRównoległobok();	
+			LayoutObwódRównoległobok frame = new LayoutObwódRównoległobok();	
 			
 		
 		}
-		else if (z == miPoleRomb)
+		else if (z == miFieldRhombus)
 		{
-			LayoutPoleRomb obiekt = new LayoutPoleRomb();
+			LayoutPoleRomb frame = new LayoutPoleRomb();
 			
 			
 		}
-		else if (z == miObwódRomb)
+		else if (z == miCircuitRhombus)
 		{
 			
-			LayoutObwódRomb obiekt = new LayoutObwódRomb();
+			LayoutObwódRomb frame = new LayoutObwódRomb();
 			
 			
 		}
-		else if (z == miPoleTrapez)
+		else if (z == miFieldTrapeze)
 		{
 			
 			
-			LayoutPoleTrapez obiekt = new LayoutPoleTrapez();
+			LayoutPoleTrapez frame = new LayoutPoleTrapez();
 			
 			
 		}
-		else if (z == miObwódTrapez)
+		else if (z == miCircuitTrapeze)
 		{
-			LayoutObwódTrapez obiekt = new LayoutObwódTrapez();
+			LayoutObwódTrapez frame = new LayoutObwódTrapez();
 			
 		}
 		
