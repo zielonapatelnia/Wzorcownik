@@ -11,9 +11,9 @@ import com.zielonapatelnia.math.CalculationCircuitCircle;
 
 public class LayoutCircuitCircle implements ActionListener {
 
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue;
 	
 	public LayoutCircuitCircle()
 	{
@@ -30,27 +30,27 @@ public class LayoutCircuitCircle implements ActionListener {
 	oknoMiObwódKoło.setDefaultCloseOperation(1);
 	oknoMiObwódKoło.setVisible(true);
 	
-	jlNagłówek = new JLabel("Aby obliczyć obwód koła podaj średnicę koła w cm");
-	jlNagłówek.setBounds(70, 10, 300, 20);
-	oknoMiObwódKoło.add(jlNagłówek);	
+	jlHeading = new JLabel("Aby obliczyć obwód koła podaj średnicę koła w cm");
+	jlHeading.setBounds(70, 10, 300, 20);
+	oknoMiObwódKoło.add(jlHeading);	
 	
-	jtfWartość = new JTextField();
-	jtfWartość.setBounds(150, 60, 100, 40);
-	oknoMiObwódKoło.add(jtfWartość);
+	jtfValue = new JTextField();
+	jtfValue.setBounds(150, 60, 100, 40);
+	oknoMiObwódKoło.add(jtfValue);
 	
 	
-	jbOblicz = new JButton("Oblicz !");
-	jbOblicz.setBounds(50, 150, 300, 40);
-	oknoMiObwódKoło.add(jbOblicz);
-	jbOblicz.addActionListener(this);
+	jbCalculate = new JButton("Oblicz !");
+	jbCalculate.setBounds(50, 150, 300, 40);
+	oknoMiObwódKoło.add(jbCalculate);
+	jbCalculate.addActionListener(this);
 	
-	jlWynik = new JLabel("Wynik");
-	jlWynik.setBounds(180, 210, 100, 20);
-	oknoMiObwódKoło.add(jlWynik);
+	jlResult = new JLabel("Wynik");
+	jlResult.setBounds(180, 210, 100, 20);
+	oknoMiObwódKoło.add(jlResult);
 	
-	jtfWynik = new JTextField();
-	jtfWynik.setBounds(150, 260, 100, 40);
-	oknoMiObwódKoło.add(jtfWynik);
+	jtfResult = new JTextField();
+	jtfResult.setBounds(150, 260, 100, 40);
+	oknoMiObwódKoło.add(jtfResult);
 	}
 	
 	
@@ -58,13 +58,13 @@ public class LayoutCircuitCircle implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		Object z = e.getSource();
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfWartość.getText());
+			double a = Double.parseDouble(jtfValue.getText());
 			
 			CalculationCircuitCircle rezultat = new CalculationCircuitCircle(a);
 			String wynik = rezultat.rozwiązanieObwódKoło();
-			jtfWynik.setText(wynik);
+			jtfResult.setText(wynik);
 			
 			
 			
