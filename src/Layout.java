@@ -12,19 +12,19 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import com.zielomapatelnia.layout.LayoutCircuitCircle;
-import com.zielomapatelnia.layout.LayoutObwódKwadrat;
-import com.zielomapatelnia.layout.LayoutObwódProstokąt;
-import com.zielomapatelnia.layout.LayoutObwódRomb;
-import com.zielomapatelnia.layout.LayoutObwódRównoległobok;
-import com.zielomapatelnia.layout.LayoutObwódTrapez;
-import com.zielomapatelnia.layout.LayoutObwódTrójkąt;
-import com.zielomapatelnia.layout.LayoutPoleKoło;
-import com.zielomapatelnia.layout.LayoutPoleKwadrat;
-import com.zielomapatelnia.layout.LayoutPoleProstokąt;
-import com.zielomapatelnia.layout.LayoutPoleRomb;
-import com.zielomapatelnia.layout.LayoutPoleRównoległobok;
-import com.zielomapatelnia.layout.LayoutPoleTrapez;
-import com.zielomapatelnia.layout.LayoutPoleTrójkąt;
+import com.zielomapatelnia.layout.LayoutCircuitQuadrat;
+import com.zielomapatelnia.layout.LayoutCircuitRectangle;
+import com.zielomapatelnia.layout.LayoutCircuitRhombus;
+import com.zielomapatelnia.layout.LayoutCircuitParallelogram;
+import com.zielomapatelnia.layout.LayoutCircuitTrapeze;
+import com.zielomapatelnia.layout.LayoutCircuitTriangle;
+import com.zielomapatelnia.layout.LayoutFieldCircle;
+import com.zielomapatelnia.layout.LayoutFieldQuadrat;
+import com.zielomapatelnia.layout.LayoutFieldRectangle;
+import com.zielomapatelnia.layout.LayoutFieldRhombus;
+import com.zielomapatelnia.layout.LayoutFieldPrallelogram;
+import com.zielomapatelnia.layout.LayoutFieldTrapeze;
+import com.zielomapatelnia.layout.LayoutFieldTriangle;
 
 
 public class Layout extends JFrame implements ActionListener {
@@ -146,7 +146,7 @@ private	JMenuBar menuBar;
 		}
 		else if (z == miFieldCircle)
 		{
-		LayoutPoleKoło frame = new LayoutPoleKoło();
+		LayoutFieldCircle frame = new LayoutFieldCircle();
 		
 		}
 		else if (z == miCircuitCircle)
@@ -156,20 +156,20 @@ private	JMenuBar menuBar;
 		} 
 		else if (z == miFieldQuadrat)
 		{
-			LayoutPoleKwadrat frame = new LayoutPoleKwadrat();
+			LayoutFieldQuadrat frame = new LayoutFieldQuadrat();
 			
 			
 			
 		} 
 		else if (z == miCircuitQuadreat)
 		{
-			LayoutObwódKwadrat frame = new LayoutObwódKwadrat();
+			LayoutCircuitQuadrat frame = new LayoutCircuitQuadrat();
 			
 			
 		}
 		else if (z == miFieldRectangle)
 		{
-			LayoutPoleProstokąt frame = new LayoutPoleProstokąt();
+			LayoutFieldRectangle frame = new LayoutFieldRectangle();
 			
 			
 		}
@@ -177,39 +177,39 @@ private	JMenuBar menuBar;
 		{
 			
 			
-			LayoutObwódProstokąt frame = new LayoutObwódProstokąt();
+			LayoutCircuitRectangle frame = new LayoutCircuitRectangle();
 			
 		}
 		else if (z == miFieldTriangle)
 		{
-			LayoutPoleTrójkąt frame = new LayoutPoleTrójkąt();
+			LayoutFieldTriangle frame = new LayoutFieldTriangle();
 		}
 		else if (z == miCircuitTriangle)
 		{
-			LayoutObwódTrójkąt frame = new LayoutObwódTrójkąt();
+			LayoutCircuitTriangle frame = new LayoutCircuitTriangle();
 			
 		}
 		else if (z == miFieldParallelogram)
 		{
-			LayoutPoleRównoległobok frame = new LayoutPoleRównoległobok();
+			LayoutFieldPrallelogram frame = new LayoutFieldPrallelogram();
 			
 		}
 		else if (z == miCircuitParallelogram)
 		{
-			LayoutObwódRównoległobok frame = new LayoutObwódRównoległobok();	
+			LayoutCircuitParallelogram frame = new LayoutCircuitParallelogram();	
 			
 		
 		}
 		else if (z == miFieldRhombus)
 		{
-			LayoutPoleRomb frame = new LayoutPoleRomb();
+			LayoutFieldRhombus frame = new LayoutFieldRhombus();
 			
 			
 		}
 		else if (z == miCircuitRhombus)
 		{
 			
-			LayoutObwódRomb frame = new LayoutObwódRomb();
+			LayoutCircuitRhombus frame = new LayoutCircuitRhombus();
 			
 			
 		}
@@ -217,13 +217,13 @@ private	JMenuBar menuBar;
 		{
 			
 			
-			LayoutPoleTrapez frame = new LayoutPoleTrapez();
+			LayoutFieldTrapeze frame = new LayoutFieldTrapeze();
 			
 			
 		}
 		else if (z == miCircuitTrapeze)
 		{
-			LayoutObwódTrapez frame = new LayoutObwódTrapez();
+			LayoutCircuitTrapeze frame = new LayoutCircuitTrapeze();
 			
 		}
 		

@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import com.zielonapatelnia.math.ObliczanieObwódKoło;
+import com.zielonapatelnia.math.CalculationCircuitCircle;
 
 public class LayoutCircuitCircle implements ActionListener {
 
@@ -62,7 +62,7 @@ public class LayoutCircuitCircle implements ActionListener {
 		{
 			double a = Double.parseDouble(jtfWartość.getText());
 			
-			ObliczanieObwódKoło rezultat = new ObliczanieObwódKoło(a);
+			CalculationCircuitCircle rezultat = new CalculationCircuitCircle(a);
 			String wynik = rezultat.rozwiązanieObwódKoło();
 			jtfWynik.setText(wynik);
 			
