@@ -14,14 +14,10 @@ public class CalculationFieldRhombus
 	
 	public String answerFieldRhombus()
 	{
-		double p;
-		String rozwiązanie;
-		
-		p = (a*b)/2;
-		rozwiązanie = ("" + p);
-		return rozwiązanie;
+	
+		double p = (a*b)/2;
+		String result = ("" + p);
+		return result;
 		
 	}
-	
-	
 }
