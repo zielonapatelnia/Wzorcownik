@@ -1,30 +1,21 @@
 package com.zielonapatelnia.math;
 
-public class CalculationFieldCircle {
+public class CalculationFieldCircle
+{
 
 	private double a;
 	
 	public CalculationFieldCircle(double a)
 	{
 	 this.a = a;	
-		
 	}
 	
-	
-
-
-
-	public String rozwiązaniePoleKoło()
+	public String answerFieldCircle()
 	{
-		String rozwiązanie = "";
+		
 		a = a * Math.PI;
-		rozwiązanie = ("" +a);
-		return rozwiązanie ;
+		String result = ("" +a);
+		return result ;
 		
 	}
-	
-	
-	
-	
-
 }

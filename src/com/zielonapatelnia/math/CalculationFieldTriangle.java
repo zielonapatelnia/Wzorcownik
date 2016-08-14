@@ -1,6 +1,7 @@
 package com.zielonapatelnia.math;
 
-public class CalculationFieldTriangle {
+public class CalculationFieldTriangle 
+{
 	
 	double a;
 	
@@ -10,17 +11,12 @@ public class CalculationFieldTriangle {
 		this.a = a;
 	}
 	
-	public String rozwiązaniePoleTrójkąt()
+	public String answerFieldTriangle()
 	{
-		double p;
-		String rozwiązanie;
 		
-		p = (a*a) * Math.sqrt(3)/4;
-		rozwiązanie = ("" + p);
+		double p = (a*a) * Math.sqrt(3)/4;
+		String result = ("" + p);
+		return result;
 		
-		
-		return rozwiązanie;
 	}
-
-	
 }

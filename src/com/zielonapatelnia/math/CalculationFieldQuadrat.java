@@ -1,6 +1,7 @@
 package com.zielonapatelnia.math;
 
-public class CalculationFieldQuadrat {
+public class CalculationFieldQuadrat 
+{
 	
 	private double a;
 	
@@ -9,19 +10,12 @@ public class CalculationFieldQuadrat {
 		this.a = a;
 	}
 	
-	public String rozwiązaniePoleKwadrat()
+	public String answerFieldQuadrat()
 	{
-		String rozwiązanie;
-		double p;
 		
-		p = a*a;
-		rozwiązanie = ("" + p);
+		double p = a*a;
+		String result = ("" + p);
+		return result;
 		
-		
-		return rozwiązanie;
 	}
-	
-
-	
-
 }

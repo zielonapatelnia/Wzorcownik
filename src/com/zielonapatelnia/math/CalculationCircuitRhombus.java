@@ -10,16 +10,12 @@ public class CalculationCircuitRhombus
 		this.a = a;
 	}
 
-	public String obliczanieObwódRomb()
+	public String answerCircuitRhombus()
 	{
-		double o;
-		String rezultat;
 		
-		o = 4*a;
-		rezultat = ("" + o);
-		return rezultat;
+		double o = 4*a;
+		String result = ("" + o);
+		return result;
 		
 	}
-	
-	
 }

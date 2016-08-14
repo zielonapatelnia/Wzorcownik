@@ -1,8 +1,7 @@
 package com.zielonapatelnia.math;
 
-public class CalculationCircuitTriangle {
-	
-	
+public class CalculationCircuitTriangle 
+{
 	private double a,b,c;
 	
 	public CalculationCircuitTriangle(double a, double b, double c)
@@ -12,21 +11,12 @@ public class CalculationCircuitTriangle {
 		this.c = c;
 	}
 		
-		public String obliczanieObwódTrójkąt()
+		public String answerCircuitTriangle()
 		{
-			String rozwiązanie;
-			double p;
 			
-			p = a+b+c;
-			rozwiązanie = ("" + p);
-			
-			return rozwiązanie;
-			
+			double p = a+b+c;
+			String result = ("" + p);
+			return result;
 			
 		}
-	
-	
-	
-	
-
 }

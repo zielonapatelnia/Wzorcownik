@@ -12,7 +12,7 @@ public class CalculationFieldRhombus
 	}
 	
 	
-	public String rozwiązaniePoleRomb()
+	public String answerFieldRhombus()
 	{
 		double p;
 		String rozwiązanie;

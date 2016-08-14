@@ -69,7 +69,7 @@ public class LayoutCircuitTriangle implements ActionListener {
 				double c = Double.parseDouble(jtfValue3.getText());
 				
 				CalculationCircuitTriangle obiekt = new CalculationCircuitTriangle(a,b,c);
-				String rozwiązanie = obiekt.obliczanieObwódTrójkąt();
+				String rozwiązanie = obiekt.answerCircuitTriangle();
 				jtfResult.setText(rozwiązanie);
 			}
 	}

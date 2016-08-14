@@ -14,16 +14,12 @@ public class CalculationCircuitTrapeze
 		this.d = d;
 	}
 	
-	public String rozwiązanieObwódTrapez()
+	public String answerCircuitTrapeze()
 	{
-		double o;
-		String rozwiązanie;
 		
-		o = a+b+c+d;
-		rozwiązanie = ("" + o);
-		return rozwiązanie;
+		double o = a+b+c+d;
+		String result = ("" + o);
+		return result;
 		
 	}
-	
-	
 }

@@ -72,7 +72,7 @@ public class LayoutCircuitTrapeze implements ActionListener {
 			double d = Double.parseDouble(jtfValue4.getText());
 			
 			CalculationCircuitTrapeze result = new CalculationCircuitTrapeze(a,b,c,d);
-			String resultFinal = result.rozwiązanieObwódTrapez();
+			String resultFinal = result.answerCircuitTrapeze();
 			jtfResult.setText(resultFinal);
 			
 		}

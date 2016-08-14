@@ -57,7 +57,7 @@ public class LayoutFieldQuadrat implements ActionListener {
 				double a = Double.parseDouble(jtfValue1.getText());
 				
 				CalculationFieldQuadrat result = new CalculationFieldQuadrat(a);
-				String resultFinal = result.rozwiązaniePoleKwadrat();
+				String resultFinal = result.answerFieldQuadrat();
 				jtfResult.setText(resultFinal);
 				
 			}

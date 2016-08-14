@@ -1,6 +1,7 @@
 package com.zielonapatelnia.math;
 
-public class CalculationCircuitCircle {
+public class CalculationCircuitCircle
+{
 	
 	private double d;
 	
@@ -9,19 +10,12 @@ public class CalculationCircuitCircle {
 		this.d = d;
 	}
 	
-	
-	public String rozwiązanieObwódKoło()
+	public String answerCircuitCircle()
 	{
-		String rozwiązanie = "";
-		double p;
 		
-		p = (Math.PI * (d*d))/4;
-		rozwiązanie = ("" + p);
-		
-		return rozwiązanie;
+		double p = (Math.PI * (d*d))/4;
+		String result = ("" + p);
+		return result;
+	
 	}
-	
-
-	
-
 }

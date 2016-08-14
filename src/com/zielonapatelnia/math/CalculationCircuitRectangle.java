@@ -1,9 +1,9 @@
 package com.zielonapatelnia.math;
 
-public class CalculationCircuitRectangle {
+public class CalculationCircuitRectangle 
+{
 	
 	double a,b;
-	
 	
 	public CalculationCircuitRectangle(double a, double b)
 	{
@@ -11,20 +11,13 @@ public class CalculationCircuitRectangle {
 		this.b = b;
 	}
 	
-		public String rozwiązanieObwódPoleKwadrat()
+		
+	public String answerCircuitRectangle()
 	{
-			double p;
-			String rozwiązanie;
 			
-			p = (2*a) + (2*b);
-			rozwiązanie = ("" + p);
-			
-			return rozwiązanie;
+			double p = (2*a) + (2*b);
+			String result = ("" + p);
+			return result;
 			
 	}
-
-	
-
-	
-	
 }

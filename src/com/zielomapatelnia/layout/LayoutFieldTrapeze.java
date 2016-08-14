@@ -69,7 +69,7 @@ public class LayoutFieldTrapeze implements ActionListener
 			
 			
 			CalculationFieldTrapeze result = new CalculationFieldTrapeze( a, b,c);
-			String finalResult = result.rozwiązaniePoleTrapez();
+			String finalResult = result.answerFieldTrapeze();
 			jtfResult.setText(finalResult);
 			
 		}

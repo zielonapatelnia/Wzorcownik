@@ -61,7 +61,7 @@ public class LayoutCircuitParallelogram implements ActionListener
 			double b = Double.parseDouble(jtfValue2.getText());
 			
 			CalculationCircuitParallelogram result = new CalculationCircuitParallelogram(a,b);
-			String resultFinal = result.rozwiązanieObwódRównoległoboku();
+			String resultFinal = result.answerCircuitParallelogram();
 			jtfResult.setText(resultFinal);
 			
 			

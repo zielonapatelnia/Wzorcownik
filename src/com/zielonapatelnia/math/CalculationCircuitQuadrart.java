@@ -1,7 +1,7 @@
 package com.zielonapatelnia.math;
 
-public class CalculationCircuitQuadrart {
-	
+public class CalculationCircuitQuadrart 
+{
 	double a;
 	
 	public CalculationCircuitQuadrart(double a)
@@ -9,19 +9,12 @@ public class CalculationCircuitQuadrart {
 		this.a = a;
 	}
 
-	public String rozwiązanieObwódKwadrat()
+	public String answerCircuitQuadrat()
 	{
-		double o;
-		String rozwiązanie;
 		
-		o = 4 * a;
-		rozwiązanie = ("" + o);
+		double o = 4 * a;
+		String result = ("" + o);
+		return result;
 		
-		
-		return rozwiązanie;
 	}
-	
-	
-	
-
 }

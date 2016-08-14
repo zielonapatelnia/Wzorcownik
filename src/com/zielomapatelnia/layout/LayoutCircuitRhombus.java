@@ -58,7 +58,7 @@ public class LayoutCircuitRhombus implements ActionListener {
 				double a = Double.parseDouble(jtfValue1.getText());
 				
 				CalculationCircuitRhombus result = new CalculationCircuitRhombus(a);
-				String resultFinal = result.obliczanieObwódRomb();
+				String resultFinal = result.answerCircuitRhombus();
 				jtfResult.setText(resultFinal);
 				
 				

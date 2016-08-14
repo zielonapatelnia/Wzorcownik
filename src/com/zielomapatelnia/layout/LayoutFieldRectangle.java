@@ -64,7 +64,7 @@ public class LayoutFieldRectangle implements ActionListener  {
 				double b = Double.parseDouble(jtfValue2.getText());
 				
 				CalculationFieldRectangle result = new CalculationFieldRectangle(a,b);
-				String resultFinal = result.rozwiązaniePoleProtokąt();
+				String resultFinal = result.answerFieldRectangle();
 				jtfResult.setText(resultFinal);
 			}
 	}

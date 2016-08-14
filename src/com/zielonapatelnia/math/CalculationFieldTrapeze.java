@@ -11,12 +11,13 @@ public class CalculationFieldTrapeze
 		this.c = c;
 	}
 	
-	public String rozwiązaniePoleTrapez()
+	public String answerFieldTrapeze()
 	{
-		double p;
-		p = ((a+b)*c) / 2;
-		String rozwiązanie = ("" + p);
-		return rozwiązanie;
+		
+		double p = ((a+b)*c) / 2;
+		String answer = ("" + p);
+		return answer;
+		
 	}
 	
 

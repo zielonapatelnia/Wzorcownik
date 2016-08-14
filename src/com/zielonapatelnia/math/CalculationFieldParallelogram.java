@@ -11,18 +11,12 @@ public class CalculationFieldParallelogram
 		
 	}
 	
-	public String rozwiązaniePoleRównoległobok()
+	public String answerFieldParallelogram()
 	{
-		double p;
-		String rozwiązanie;
 		
-		p = a*b;
-		rozwiązanie = ("" + p);
-		return rozwiązanie;
-		
+		double p = a*b;
+		String result = ("" + p);
+		return result;
 		
 	}
-	
-
-	
 }

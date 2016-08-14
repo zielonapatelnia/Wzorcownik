@@ -63,7 +63,7 @@ public class LayoutFieldRhombus  implements ActionListener{
 			double b = Double.parseDouble(jtfValue2.getText());
 			
 			CalculationFieldRhombus result = new CalculationFieldRhombus(a,b);
-			String resultFinal = result.rozwiązaniePoleRomb();
+			String resultFinal = result.answerFieldRhombus();
 			jtfResult.setText(resultFinal);
 			
 			

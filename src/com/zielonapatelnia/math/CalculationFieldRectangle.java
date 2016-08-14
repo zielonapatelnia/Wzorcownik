@@ -1,6 +1,7 @@
 package com.zielonapatelnia.math;
 
-public class CalculationFieldRectangle {
+public class CalculationFieldRectangle 
+{
 	
 	private double a,b;
 	
@@ -10,16 +11,12 @@ public class CalculationFieldRectangle {
 		this.b = b;
 	}
 	
-	public String rozwiązaniePoleProtokąt()
+	public String answerFieldRectangle()
 	{
-		double p;
-		String rozwiązanie;
 		
-		p = a * b;
-		rozwiązanie = ("" + p);
-		return rozwiązanie;
+		double p = a * b;
+		String answer = ("" + p);
+		return answer;
+		
 	}
-
-	
-
 }

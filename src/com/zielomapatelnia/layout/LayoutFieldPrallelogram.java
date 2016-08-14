@@ -65,7 +65,7 @@ public class LayoutFieldPrallelogram implements ActionListener {
 			double b = Double.parseDouble(jtfValue2.getText());
 			
 			CalculationFieldParallelogram obiekt = new CalculationFieldParallelogram(a,b);
-			String rozwiązanie = obiekt.rozwiązaniePoleRównoległobok();
+			String rozwiązanie = obiekt.answerFieldParallelogram();
 			jtfResult.setText(rozwiązanie);
 			
 		}

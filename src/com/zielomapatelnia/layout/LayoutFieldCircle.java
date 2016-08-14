@@ -58,7 +58,7 @@ public class LayoutFieldCircle  extends JFrame implements ActionListener{
 			
 			
 			CalculationFieldCircle result = new CalculationFieldCircle(a);
-			String resultFinal = result.rozwiązaniePoleKoło();
+			String resultFinal = result.answerFieldCircle();
 			jtfResult.setText(resultFinal);
 		
 		}

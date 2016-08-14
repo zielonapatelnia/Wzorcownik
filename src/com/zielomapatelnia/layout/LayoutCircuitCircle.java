@@ -55,7 +55,7 @@ public class LayoutCircuitCircle implements ActionListener
 			double a = Double.parseDouble(jtfValue1.getText());
 			
 			CalculationCircuitCircle result = new CalculationCircuitCircle(a);
-			String resultFinal = result.rozwiązanieObwódKoło();
+			String resultFinal = result.answerCircuitCircle();
 			jtfResult.setText(resultFinal);
 			
 		}

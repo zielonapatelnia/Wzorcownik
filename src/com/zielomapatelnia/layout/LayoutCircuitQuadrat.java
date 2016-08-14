@@ -56,7 +56,7 @@ public class LayoutCircuitQuadrat implements ActionListener {
 		{
 			double a = Double.parseDouble(jtfValue1.getText());
 			CalculationCircuitQuadrart result = new CalculationCircuitQuadrart(a);
-			String resultFinal = result.rozwiązanieObwódKwadrat();
+			String resultFinal = result.answerCircuitQuadrat();
 			jtfResult.setText(resultFinal);
 		}
 	}

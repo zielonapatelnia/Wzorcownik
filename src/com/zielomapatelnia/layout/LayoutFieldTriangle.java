@@ -62,7 +62,7 @@ public class LayoutFieldTriangle implements ActionListener{
 			double b = Double.parseDouble(jtfValue1.getText());
 			
 			CalculationFieldTriangle obiekt = new CalculationFieldTriangle(b);
-			String rozwiązanie = obiekt.rozwiązaniePoleTrójkąt();
+			String rozwiązanie = obiekt.answerFieldTriangle();
 			jtfResult.setText(rozwiązanie);
 			
 		}

@@ -65,7 +65,7 @@ public class LayoutCircuitRectangle implements ActionListener {
 				Double b = Double.parseDouble(jtfValue2.getText());
 				
 				CalculationCircuitRectangle result = new CalculationCircuitRectangle(a,b);
-				String resultFinal = result.rozwiązanieObwódPoleKwadrat();
+				String resultFinal = result.answerCircuitRectangle();
 				jtfResult.setText(resultFinal);
 				
 				
