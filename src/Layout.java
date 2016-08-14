@@ -127,96 +127,37 @@ public Layout ()
 	{
 		Object z = e.getSource();
 		if ( z == miAboutProject)
-		{
-			JOptionPane.showMessageDialog(this, "                                           Cześć \n Mam na imię Krzysiek, jest to mój pierwszy projekt w Javie z użyciem Swinga \n                                  Pozdrawiam","O Projekcie", JOptionPane.INFORMATION_MESSAGE);
-		}
+		{JOptionPane.showMessageDialog(this, "                                           Cześć \n Mam na imię Krzysiek, jest to mój pierwszy projekt w Javie z użyciem Swinga \n                                  Pozdrawiam","O Projekcie", JOptionPane.INFORMATION_MESSAGE);}
 		else if (z == miFieldCircle)
-		{
-		LayoutFieldCircle frame = new LayoutFieldCircle();
-		
-		}
+		{LayoutFieldCircle frame = new LayoutFieldCircle();}
 		else if (z == miCircuitCircle)
-		{
-		LayoutCircuitCircle frame = new LayoutCircuitCircle();
-		
-		} 
+		{LayoutCircuitCircle frame = new LayoutCircuitCircle();} 
 		else if (z == miFieldQuadrat)
-		{
-			LayoutFieldQuadrat frame = new LayoutFieldQuadrat();
-			
-			
-			
-		} 
+		{LayoutFieldQuadrat frame = new LayoutFieldQuadrat();} 
 		else if (z == miCircuitQuadreat)
-		{
-			LayoutCircuitQuadrat frame = new LayoutCircuitQuadrat();
-			
-			
-		}
+		{LayoutCircuitQuadrat frame = new LayoutCircuitQuadrat();}
 		else if (z == miFieldRectangle)
-		{
-			LayoutFieldRectangle frame = new LayoutFieldRectangle();
-			
-			
-		}
+		{LayoutFieldRectangle frame = new LayoutFieldRectangle();}
 		else if (z == miCircuitRectangle)
-		{
-			
-			
-			LayoutCircuitRectangle frame = new LayoutCircuitRectangle();
-			
-		}
+		{LayoutCircuitRectangle frame = new LayoutCircuitRectangle();}
 		else if (z == miFieldTriangle)
-		{
-			LayoutFieldTriangle frame = new LayoutFieldTriangle();
-		}
+		{LayoutFieldTriangle frame = new LayoutFieldTriangle();}
 		else if (z == miCircuitTriangle)
-		{
-			LayoutCircuitTriangle frame = new LayoutCircuitTriangle();
-			
-		}
+		{LayoutCircuitTriangle frame = new LayoutCircuitTriangle();}
 		else if (z == miFieldParallelogram)
-		{
-			LayoutFieldPrallelogram frame = new LayoutFieldPrallelogram();
-			
-		}
+		{LayoutFieldPrallelogram frame = new LayoutFieldPrallelogram();}
 		else if (z == miCircuitParallelogram)
-		{
-			LayoutCircuitParallelogram frame = new LayoutCircuitParallelogram();	
-			
-		
-		}
+		{LayoutCircuitParallelogram frame = new LayoutCircuitParallelogram();}
 		else if (z == miFieldRhombus)
-		{
-			LayoutFieldRhombus frame = new LayoutFieldRhombus();
-			
-			
-		}
+		{LayoutFieldRhombus frame = new LayoutFieldRhombus();}
 		else if (z == miCircuitRhombus)
-		{
-			
-			LayoutCircuitRhombus frame = new LayoutCircuitRhombus();
-			
-			
-		}
+		{LayoutCircuitRhombus frame = new LayoutCircuitRhombus();}
 		else if (z == miFieldTrapeze)
-		{
-			
-			
-			LayoutFieldTrapeze frame = new LayoutFieldTrapeze();
-			
-			
-		}
+		{LayoutFieldTrapeze frame = new LayoutFieldTrapeze();}
 		else if (z == miCircuitTrapeze)
-		{
-			LayoutCircuitTrapeze frame = new LayoutCircuitTrapeze();
-			
-		}
-		
+		{LayoutCircuitTrapeze frame = new LayoutCircuitTrapeze();}
 		else if (z == miExit)
-		{
-			dispose();
-		}
+		{dispose();}
 		
 		
 		
