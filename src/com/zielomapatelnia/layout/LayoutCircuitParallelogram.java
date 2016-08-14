@@ -17,37 +17,37 @@ public class LayoutCircuitParallelogram implements ActionListener
 	
 	public LayoutCircuitParallelogram()
 	{
-		JFrame windowsMiCircuitParallelogram = new JFrame();
-		windowsMiCircuitParallelogram.setLayout(null);
-		windowsMiCircuitParallelogram.setSize(400, 400);
-		windowsMiCircuitParallelogram.setTitle("Obliczanie obwodu równoległoboku");
-		windowsMiCircuitParallelogram.setDefaultCloseOperation(1);
-		windowsMiCircuitParallelogram.setVisible(true);	
+		JFrame windowMiCircuitParallelogram = new JFrame();
+		windowMiCircuitParallelogram.setLayout(null);
+		windowMiCircuitParallelogram.setSize(400, 400);
+		windowMiCircuitParallelogram.setTitle("Obliczanie obwodu równoległoboku");
+		windowMiCircuitParallelogram.setDefaultCloseOperation(1);
+		windowMiCircuitParallelogram.setVisible(true);	
 		
 		jlHeading = new JLabel("Aby obliczyć obwód równole©równoległoboku podaj długość boku a oraz b");
 		jlHeading.setBounds(20, 10, 400, 20);
-		windowsMiCircuitParallelogram.add(jlHeading);	
+		windowMiCircuitParallelogram.add(jlHeading);	
 		
 		jtfValue1 = new JTextField();
 		jtfValue1.setBounds(50, 60, 70, 40);
-		windowsMiCircuitParallelogram.add(jtfValue1);
+		windowMiCircuitParallelogram.add(jtfValue1);
 		
 		jtfValue2 = new JTextField();
 		jtfValue2.setBounds(150, 60, 70, 40);
-		windowsMiCircuitParallelogram.add(jtfValue2);
+		windowMiCircuitParallelogram.add(jtfValue2);
 		
 		jbCalculate = new JButton("Oblicz !");
 		jbCalculate.setBounds(50, 150, 300, 40);
-		windowsMiCircuitParallelogram.add(jbCalculate);
+		windowMiCircuitParallelogram.add(jbCalculate);
 		jbCalculate.addActionListener(this);
 		
 		jlResult = new JLabel("Wynik");
 		jlResult.setBounds(180, 210, 100, 20);
-		windowsMiCircuitParallelogram.add(jlResult);
+		windowMiCircuitParallelogram.add(jlResult);
 		
 		jtfResult = new JTextField();
 		jtfResult.setBounds(150, 260, 100, 40);
-		windowsMiCircuitParallelogram.add(jtfResult);
+		windowMiCircuitParallelogram.add(jtfResult);
 	}
 	
 	@Override

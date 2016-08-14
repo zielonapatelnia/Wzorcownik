@@ -12,9 +12,9 @@ import com.zielonapatelnia.math.CalculationCircuitTrapeze;
 public class LayoutCircuitTrapeze implements ActionListener {
 
 	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1,jtfWartość2, jtfWartość3, jtfWartość4;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1,jtfValue2, jtfValue3, jtfValue4;
 	
 	
 	public LayoutCircuitTrapeze ()
@@ -29,38 +29,38 @@ public class LayoutCircuitTrapeze implements ActionListener {
 		oknoMiObwódTrapzez.setDefaultCloseOperation(1);
 		oknoMiObwódTrapzez.setVisible(true);	
 		
-		jlNagłówek = new JLabel("Aby obliczyć obwód trapezu podaj długość boku a,b,c,d");
-		jlNagłówek.setBounds(20, 10, 400, 20);
-		oknoMiObwódTrapzez.add(jlNagłówek);	
+		jlHeading = new JLabel("Aby obliczyć obwód trapezu podaj długość boku a,b,c,d");
+		jlHeading.setBounds(20, 10, 400, 20);
+		oknoMiObwódTrapzez.add(jlHeading);	
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(50, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość1);
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(50, 60, 70, 40);
+		oknoMiObwódTrapzez.add(jtfValue1);
 		
-		jtfWartość2 = new JTextField();
-		jtfWartość2.setBounds(150, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość2);
+		jtfValue2 = new JTextField();
+		jtfValue2.setBounds(150, 60, 70, 40);
+		oknoMiObwódTrapzez.add(jtfValue2);
 		
-		jtfWartość3 = new JTextField();
-		jtfWartość3.setBounds(250, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość3);
+		jtfValue3 = new JTextField();
+		jtfValue3.setBounds(250, 60, 70, 40);
+		oknoMiObwódTrapzez.add(jtfValue3);
 		
-		jtfWartość4 = new JTextField();
-		jtfWartość4.setBounds(350, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość4);
+		jtfValue4 = new JTextField();
+		jtfValue4.setBounds(350, 60, 70, 40);
+		oknoMiObwódTrapzez.add(jtfValue4);
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiObwódTrapzez.add(jbOblicz);
-		jbOblicz.addActionListener(this);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		oknoMiObwódTrapzez.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiObwódTrapzez.add(jlWynik);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		oknoMiObwódTrapzez.add(jlResult);
 		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiObwódTrapzez.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		oknoMiObwódTrapzez.add(jtfResult);
 		
 	}
 	
@@ -69,16 +69,16 @@ public class LayoutCircuitTrapeze implements ActionListener {
 	public void actionPerformed(ActionEvent e)
 	{
 		Object z = e.getSource();
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfWartość1.getText());
-			double b = Double.parseDouble(jtfWartość2.getText());
-			double c = Double.parseDouble(jtfWartość3.getText());
-			double d = Double.parseDouble(jtfWartość4.getText());
+			double a = Double.parseDouble(jtfValue1.getText());
+			double b = Double.parseDouble(jtfValue2.getText());
+			double c = Double.parseDouble(jtfValue3.getText());
+			double d = Double.parseDouble(jtfValue4.getText());
 			
 			CalculationCircuitTrapeze obiekt = new CalculationCircuitTrapeze(a,b,c,d);
 			String rozwiązanie = obiekt.rozwiązanieObwódTrapez();
-			jtfWynik.setText(rozwiązanie);
+			jtfResult.setText(rozwiązanie);
 			
 			
 		}

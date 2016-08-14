@@ -11,9 +11,9 @@ import com.zielonapatelnia.math.CalculationCircuitRhombus;
 
 public class LayoutCircuitRhombus implements ActionListener {
 	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1;
 	
 	public LayoutCircuitRhombus()
 	{
@@ -27,30 +27,30 @@ public class LayoutCircuitRhombus implements ActionListener {
 		oknoMiObwódRomb.setVisible(true);
 		
 		
-		jlNagłówek = new JLabel("Aby obliczyć pole rombu podaj długość boku a");
-		jlNagłówek.setBounds(20, 10, 400, 20);
-		oknoMiObwódRomb.add(jlNagłówek);	
+		jlHeading = new JLabel("Aby obliczyć pole rombu podaj długość boku a");
+		jlHeading.setBounds(20, 10, 400, 20);
+		oknoMiObwódRomb.add(jlHeading);	
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(50, 60, 70, 40);
-		oknoMiObwódRomb.add(jtfWartość1);
-		
-	
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(50, 60, 70, 40);
+		oknoMiObwódRomb.add(jtfValue1);
 		
 	
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiObwódRomb.add(jbOblicz);
-		jbOblicz.addActionListener(this);
+	
 		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiObwódRomb.add(jlWynik);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		oknoMiObwódRomb.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiObwódRomb.add(jtfWynik);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		oknoMiObwódRomb.add(jlResult);
+		
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		oknoMiObwódRomb.add(jtfResult);
 	}
 
 	
@@ -60,13 +60,13 @@ public class LayoutCircuitRhombus implements ActionListener {
 	{
 			Object z = e.getSource();
 			
-			if (z == jbOblicz)
+			if (z == jbCalculate)
 			{
-				double a = Double.parseDouble(jtfWartość1.getText());
+				double a = Double.parseDouble(jtfValue1.getText());
 				
-				CalculationCircuitRhombus obiekt = new CalculationCircuitRhombus(a);
-				String wynik = obiekt.obliczanieObwódRomb();
-				jtfWynik.setText(wynik);
+				CalculationCircuitRhombus result = new CalculationCircuitRhombus(a);
+				String resultFinal = result.obliczanieObwódRomb();
+				jtfResult.setText(resultFinal);
 				
 				
 			}

@@ -11,46 +11,46 @@ import com.zielonapatelnia.math.CalculationCircuitRectangle;
 
 public class LayoutCircuitRectangle implements ActionListener {
 	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1, jtWartość2;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1, jtfValue2;
 
 	public LayoutCircuitRectangle()
 	{
 		
 		
-		JFrame oknoMiObwódProtokąt = new JFrame();
-		oknoMiObwódProtokąt.setLayout(null);
-		oknoMiObwódProtokąt.setSize(400, 400);
-		oknoMiObwódProtokąt.setTitle("Obliczanie obwodu prosotkąta");
-		oknoMiObwódProtokąt.setDefaultCloseOperation(1);
-		oknoMiObwódProtokąt.setVisible(true);	
+		JFrame windowMiCircuitRectangle = new JFrame();
+		windowMiCircuitRectangle.setLayout(null);
+		windowMiCircuitRectangle.setSize(400, 400);
+		windowMiCircuitRectangle.setTitle("Obliczanie obwodu prosotkąta");
+		windowMiCircuitRectangle.setDefaultCloseOperation(1);
+		windowMiCircuitRectangle.setVisible(true);	
 		
-		jlNagłówek = new JLabel("Aby obliczyć obwód prostokąta podaj długość boku a i b w cm");
-		jlNagłówek.setBounds(20, 10, 380, 20);
-		oknoMiObwódProtokąt.add(jlNagłówek);	
+		jlHeading = new JLabel("Aby obliczyć obwód prostokąta podaj długość boku a i b w cm");
+		jlHeading.setBounds(20, 10, 380, 20);
+		windowMiCircuitRectangle.add(jlHeading);	
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(125, 60, 70, 40);
-		oknoMiObwódProtokąt.add(jtfWartość1);
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(125, 60, 70, 40);
+		windowMiCircuitRectangle.add(jtfValue1);
 		
-		jtWartość2 = new JTextField();
-		jtWartość2.setBounds(225, 60, 70, 40);
-		oknoMiObwódProtokąt.add(jtWartość2);
+		jtfValue2 = new JTextField();
+		jtfValue2.setBounds(225, 60, 70, 40);
+		windowMiCircuitRectangle.add(jtfValue2);
 		
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiObwódProtokąt.add(jbOblicz);
-		jbOblicz.addActionListener(this);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiCircuitRectangle.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiObwódProtokąt.add(jlWynik);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiCircuitRectangle.add(jlResult);
 		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiObwódProtokąt.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiCircuitRectangle.add(jtfResult);
 		
 	}
 	
@@ -59,14 +59,14 @@ public class LayoutCircuitRectangle implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 			Object z = e.getSource();
 			
-			if (z == jbOblicz)
+			if (z == jbCalculate)
 			{
-				Double a = Double.parseDouble(jtfWartość1.getText());
-				Double b = Double.parseDouble(jtWartość2.getText());
+				Double a = Double.parseDouble(jtfValue1.getText());
+				Double b = Double.parseDouble(jtfValue2.getText());
 				
-				CalculationCircuitRectangle wynik = new CalculationCircuitRectangle(a,b);
-				String rozwiązanie = wynik.rozwiązanieObwódPoleKwadrat();
-				jtfWynik.setText(rozwiązanie);
+				CalculationCircuitRectangle result = new CalculationCircuitRectangle(a,b);
+				String resultFinal = result.rozwiązanieObwódPoleKwadrat();
+				jtfResult.setText(resultFinal);
 				
 				
 			}

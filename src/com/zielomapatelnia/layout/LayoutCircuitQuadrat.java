@@ -11,9 +11,9 @@ import com.zielonapatelnia.math.CalculationCircuitQuadrart;
 
 public class LayoutCircuitQuadrat implements ActionListener {
 	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1;
 
 	public LayoutCircuitQuadrat()
 	{
@@ -21,34 +21,34 @@ public class LayoutCircuitQuadrat implements ActionListener {
 		
 	
 		
-		JFrame oknoMiObwódKwadrat = new JFrame();
-		oknoMiObwódKwadrat.setLayout(null);
-		oknoMiObwódKwadrat.setSize(400, 400);
-		oknoMiObwódKwadrat.setTitle("Obliczanie obwodu kwadratu");
-		oknoMiObwódKwadrat.setDefaultCloseOperation(1);
-		oknoMiObwódKwadrat.setVisible(true);
+		JFrame windowMiCircuitQuadrat = new JFrame();
+		windowMiCircuitQuadrat.setLayout(null);
+		windowMiCircuitQuadrat.setSize(400, 400);
+		windowMiCircuitQuadrat.setTitle("Obliczanie obwodu kwadratu");
+		windowMiCircuitQuadrat.setDefaultCloseOperation(1);
+		windowMiCircuitQuadrat.setVisible(true);
 		
-		jlNagłówek = new JLabel("Aby obliczyć obwód kwadratu podaj długość boku w cm");
-		jlNagłówek.setBounds(20, 10, 380, 20);
-		oknoMiObwódKwadrat.add(jlNagłówek);	
+		jlHeading = new JLabel("Aby obliczyć obwód kwadratu podaj długość boku w cm");
+		jlHeading.setBounds(20, 10, 380, 20);
+		windowMiCircuitQuadrat.add(jlHeading);	
 		
-		jtfWartość = new JTextField();
-		jtfWartość.setBounds(150, 60, 100, 40);
-		oknoMiObwódKwadrat.add(jtfWartość);
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(150, 60, 100, 40);
+		windowMiCircuitQuadrat.add(jtfValue1);
 		
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiObwódKwadrat.add(jbOblicz);
-		jbOblicz.addActionListener(this);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiCircuitQuadrat.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiObwódKwadrat.add(jlWynik);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiCircuitQuadrat.add(jlResult);
 		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiObwódKwadrat.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiCircuitQuadrat.add(jtfResult);
 	}
 	
 	
@@ -58,12 +58,12 @@ public class LayoutCircuitQuadrat implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object z = e.getSource();
 		
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfWartość.getText());
-			CalculationCircuitQuadrart obiekt = new CalculationCircuitQuadrart(a);
-			String rozwiązanie = obiekt.rozwiązanieObwódKwadrat();
-			jtfWynik.setText(rozwiązanie);
+			double a = Double.parseDouble(jtfValue1.getText());
+			CalculationCircuitQuadrart result = new CalculationCircuitQuadrart(a);
+			String resultFinal = result.rozwiązanieObwódKwadrat();
+			jtfResult.setText(resultFinal);
 		}
 		
 		

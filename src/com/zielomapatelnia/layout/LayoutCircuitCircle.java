@@ -13,7 +13,7 @@ public class LayoutCircuitCircle implements ActionListener
 {
 	JLabel jlHeading, jlResult;
 	JButton jbCalculate;
-	JTextField jtfResult, jtfValue;
+	JTextField jtfResult, jtfValue1;
 	
 	public LayoutCircuitCircle()
 	{
@@ -28,9 +28,9 @@ public class LayoutCircuitCircle implements ActionListener
 	jlHeading.setBounds(70, 10, 300, 20);
 	windowMiCircuitCircle.add(jlHeading);	
 	
-	jtfValue = new JTextField();
-	jtfValue.setBounds(150, 60, 100, 40);
-	windowMiCircuitCircle.add(jtfValue);
+	jtfValue1 = new JTextField();
+	jtfValue1.setBounds(150, 60, 100, 40);
+	windowMiCircuitCircle.add(jtfValue1);
 	
 	jbCalculate = new JButton("Oblicz !");
 	jbCalculate.setBounds(50, 150, 300, 40);
@@ -52,7 +52,7 @@ public class LayoutCircuitCircle implements ActionListener
 		Object z = e.getSource();
 		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfValue.getText());
+			double a = Double.parseDouble(jtfValue1.getText());
 			
 			CalculationCircuitCircle result = new CalculationCircuitCircle(a);
 			String resultFinal = result.rozwiązanieObwódKoło();
