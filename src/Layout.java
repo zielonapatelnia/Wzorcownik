@@ -36,16 +36,12 @@ private	JMenuBar menuBar;
 	miCircuitRectangle, miFieldTriangle, miCircuitTriangle, miFieldParallelogram, miCircuitParallelogram,miFieldRhombus,miCircuitRhombus,
 	miFieldTrapeze,miCircuitTrapeze;
 	
-	
-	
-	
-	public Layout ()
+public Layout ()
 	{
 		setSize(810,450);
 		setTitle("Wzorownik v 0.1");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		
 		
 		menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -56,8 +52,6 @@ private	JMenuBar menuBar;
 		menuBar.add(mFlatFigure);
 		mHelp = new JMenu("Pomoc");
 		menuBar.add(mHelp);
-		
-		
 		
 		miExit = new JMenuItem("Wyjscie");
 		mFile.addSeparator();
@@ -111,8 +105,6 @@ private	JMenuBar menuBar;
 		miCircuitTrapeze = new JMenuItem("Oblicz obwód trapezu");
 		mTrapeze.add(miCircuitTrapeze);
 		
-		
-		
 		miFieldCircle.addActionListener(this);
 		miCircuitCircle.addActionListener(this);
 		miFieldQuadrat.addActionListener(this);
@@ -130,16 +122,10 @@ private	JMenuBar menuBar;
 		miExit.addActionListener(this);
 	}
 	
-	
-	
-	
-	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 		Object z = e.getSource();
-		
-		
-
 		if ( z == miAboutProject)
 		{
 			JOptionPane.showMessageDialog(this, "                                           Cześć \n Mam na imię Krzysiek, jest to mój pierwszy projekt w Javie z użyciem Swinga \n                                  Pozdrawiam","O Projekcie", JOptionPane.INFORMATION_MESSAGE);
@@ -236,16 +222,7 @@ private	JMenuBar menuBar;
 		
 	}
 
-
-
-
-
-
-
-
-
-
-	public static void main(String[] args) {
+public static void main(String[] args) {
 
 		Layout appMenu = new Layout();
 		appMenu.setVisible(true);

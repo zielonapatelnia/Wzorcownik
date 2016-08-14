@@ -11,73 +11,56 @@ import com.zielonapatelnia.math.CalculationFieldCircle;
 
 public class LayoutFieldCircle  extends JFrame implements ActionListener{
 
-	private JLabel jlNagłówek, jlWynik;
-	private JButton jbOblicz;
-	private	JTextField jtfWynik, jtfWartość;
-	
+	private JLabel jlHeading, jlResult;
+	private JButton jbCalculate;
+	private	JTextField jtfResult, jtfValue1;
 	
 	public LayoutFieldCircle()
 	{
 		
+		JFrame windowsMiFieldCircle = new JFrame();
+		windowsMiFieldCircle.setLayout(null);
+		windowsMiFieldCircle.setSize(400, 400);
+		windowsMiFieldCircle.setTitle("Obliczanie pola koła");
+		windowsMiFieldCircle.setDefaultCloseOperation(1);
+		windowsMiFieldCircle.setVisible(true);
 		
-		JFrame oknoMiPoleKoło = new JFrame();
-		oknoMiPoleKoło.setLayout(null);
+		jlHeading = new JLabel("Aby obliczyć pole koła podaj promień w cm");
+		jlHeading.setBounds(70, 10, 300, 20);
+		windowsMiFieldCircle.add(jlHeading);	
 		
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(150, 60, 100, 40);
+		windowsMiFieldCircle.add(jtfValue1);
 		
-		oknoMiPoleKoło.setSize(400, 400);
-		oknoMiPoleKoło.setTitle("Obliczanie pola koła");
-		oknoMiPoleKoło.setDefaultCloseOperation(1);
-		oknoMiPoleKoło.setVisible(true);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowsMiFieldCircle.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jlNagłówek = new JLabel("Aby obliczyć pole koła podaj promień w cm");
-		jlNagłówek.setBounds(70, 10, 300, 20);
-		oknoMiPoleKoło.add(jlNagłówek);	
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowsMiFieldCircle.add(jlResult);
 		
-		jtfWartość = new JTextField();
-		jtfWartość.setBounds(150, 60, 100, 40);
-		oknoMiPoleKoło.add(jtfWartość);
-		
-		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiPoleKoło.add(jbOblicz);
-		jbOblicz.addActionListener(this);
-		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiPoleKoło.add(jlWynik);
-		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiPoleKoło.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowsMiFieldCircle.add(jtfResult);
 	}
-	
-	
-	
-	
-	
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 		Object z = e.getSource();
 		
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfWartość.getText());
+			double a = Double.parseDouble(jtfValue1.getText());
 			
 			
-			CalculationFieldCircle obliczamPoleKoła = new CalculationFieldCircle(a);
-			String rozwiązanie = obliczamPoleKoła.rozwiązaniePoleKoło();
-			jtfWynik.setText(rozwiązanie);
+			CalculationFieldCircle result = new CalculationFieldCircle(a);
+			String resultFinal = result.rozwiązaniePoleKoło();
+			jtfResult.setText(resultFinal);
 		
-			
-			
-			
 		}
-		
-		
 	}
-
-
-
 }

@@ -1,59 +1,79 @@
 package com.zielomapatelnia.layout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class LayoutFieldTrapeze {
+import com.zielonapatelnia.math.CalculationFieldTrapeze;
 
+public class LayoutFieldTrapeze implements ActionListener
+{
+
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1,jtfValue2, jtfValue3;
+	
 	public LayoutFieldTrapeze()
 	{
-		JLabel jlNagłówek, jlWynik;
-		JButton jbOblicz;
-		JTextField jtfWynik, jtfWartość1,jtfWartość2, jtfWartość3, jtfWartość4;
+	
+		JFrame windowMiFieldTrapeze = new JFrame();
+		windowMiFieldTrapeze.setLayout(null);
+		windowMiFieldTrapeze.setSize(400, 400);
+		windowMiFieldTrapeze.setTitle("Obliczanie pola trapeza");
+		windowMiFieldTrapeze.setDefaultCloseOperation(1);
+		windowMiFieldTrapeze.setVisible(true);	
 		
+		jlHeading = new JLabel("Aby obliczyć pole trapezu podaj długość boku a,b,c");
+		jlHeading.setBounds(20, 10, 400, 20);
+		windowMiFieldTrapeze.add(jlHeading);	
 		
-		JFrame oknoMiObwódTrapzez = new JFrame();
-		oknoMiObwódTrapzez.setLayout(null);
-		oknoMiObwódTrapzez.setSize(400, 400);
-		oknoMiObwódTrapzez.setTitle("Obliczanie obwodu trapeza");
-		oknoMiObwódTrapzez.setDefaultCloseOperation(1);
-		oknoMiObwódTrapzez.setVisible(true);	
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(50, 60, 70, 40);
+		windowMiFieldTrapeze.add(jtfValue1);
 		
-		jlNagłówek = new JLabel("Aby obliczyć obwód trapezu podaj długość boku a,b,c,d");
-		jlNagłówek.setBounds(20, 10, 400, 20);
-		oknoMiObwódTrapzez.add(jlNagłówek);	
+		jtfValue2 = new JTextField();
+		jtfValue2.setBounds(150, 60, 70, 40);
+		windowMiFieldTrapeze.add(jtfValue2);
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(50, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość1);
+		jtfValue3 = new JTextField();
+		jtfValue3.setBounds(250, 60, 70, 40);
+		windowMiFieldTrapeze.add(jtfValue3);
 		
-		jtfWartość2 = new JTextField();
-		jtfWartość2.setBounds(150, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość2);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiFieldTrapeze.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jtfWartość3 = new JTextField();
-		jtfWartość3.setBounds(250, 60, 70, 40);
-		oknoMiObwódTrapzez.add(jtfWartość3);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiFieldTrapeze.add(jlResult);
 		
-		jtfWartość4 = new JTextField();
-		jtfWartość4.setBounds(350, 60, 70, 40);
-		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiObwódTrapzez.add(jbOblicz);
-		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiObwódTrapzez.add(jlWynik);
-		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiObwódTrapzez.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiFieldTrapeze.add(jtfResult);
 		
 	}
-	
-	
 
-	
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		Object z = e.getSource();
+		if (z == jbCalculate)
+		{
+			double a = Double.parseDouble(jtfValue1.getText());
+			double b = Double.parseDouble(jtfValue2.getText());
+			double c = Double.parseDouble(jtfValue3.getText());
+			
+			
+			CalculationFieldTrapeze result = new CalculationFieldTrapeze( a, b,c);
+			String finalResult = result.rozwiązaniePoleTrapez();
+			jtfResult.setText(finalResult);
+			
+		}
+	}
 }
+
+

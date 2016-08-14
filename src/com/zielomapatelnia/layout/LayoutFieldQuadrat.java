@@ -11,67 +11,55 @@ import com.zielonapatelnia.math.CalculationFieldQuadrat;
 
 public class LayoutFieldQuadrat implements ActionListener {
 	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1;
 	
 	public LayoutFieldQuadrat()
 	{
 		
+		JFrame windowMiFieldQuadrat = new JFrame();
+		windowMiFieldQuadrat.setLayout(null);
+		windowMiFieldQuadrat.setSize(400, 400);
+		windowMiFieldQuadrat.setTitle("Obliczanie pola kwadratu");
+		windowMiFieldQuadrat.setDefaultCloseOperation(1);
+		windowMiFieldQuadrat.setVisible(true);
 		
-		JFrame oknoMiPoleKwadrat = new JFrame();
-		oknoMiPoleKwadrat.setLayout(null);
-		oknoMiPoleKwadrat.setSize(400, 400);
-		oknoMiPoleKwadrat.setTitle("Obliczanie pola kwadratu");
-		oknoMiPoleKwadrat.setDefaultCloseOperation(1);
-		oknoMiPoleKwadrat.setVisible(true);
+		jlHeading = new JLabel("Aby obliczyć pole kwadratu podaj długość boku w cm");
+		jlHeading.setBounds(20, 10, 380, 20);
+		windowMiFieldQuadrat.add(jlHeading);	
 		
-		jlNagłówek = new JLabel("Aby obliczyć pole kwadratu podaj długość boku w cm");
-		jlNagłówek.setBounds(20, 10, 380, 20);
-		oknoMiPoleKwadrat.add(jlNagłówek);	
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(150, 60, 100, 40);
+		windowMiFieldQuadrat.add(jtfValue1);
 		
-		jtfWartość = new JTextField();
-		jtfWartość.setBounds(150, 60, 100, 40);
-		oknoMiPoleKwadrat.add(jtfWartość);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiFieldQuadrat.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiFieldQuadrat.add(jlResult);
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiPoleKwadrat.add(jbOblicz);
-		jbOblicz.addActionListener(this);
-		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiPoleKwadrat.add(jlWynik);
-		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiPoleKwadrat.add(jtfWynik);
-		
-		
-		
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiFieldQuadrat.add(jtfResult);
 	}
 	
-	
-
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e)
+	{
 			Object z = e.getSource();
 			
-			if (z == jbOblicz)
+			if (z == jbCalculate)
 			{
-				double a = Double.parseDouble(jtfWartość.getText());
+				double a = Double.parseDouble(jtfValue1.getText());
 				
-				CalculationFieldQuadrat obliczamPoleKwardatu = new CalculationFieldQuadrat(a);
-				String rozwiązanie = obliczamPoleKwardatu.rozwiązaniePoleKwadrat();
-				jtfWynik.setText(rozwiązanie);
+				CalculationFieldQuadrat result = new CalculationFieldQuadrat(a);
+				String resultFinal = result.rozwiązaniePoleKwadrat();
+				jtfResult.setText(resultFinal);
 				
 			}
-		
 	}
-
-
-
-
-
 }

@@ -11,74 +11,62 @@ import com.zielonapatelnia.math.CalculationFieldRhombus;
 
 public class LayoutFieldRhombus  implements ActionListener{
 
-	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1, jtfWartość2;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1, jtfValue2;
 	
 	public LayoutFieldRhombus()
 	{
 		
+		JFrame windowMiFieldRhombus = new JFrame();
+		windowMiFieldRhombus.setLayout(null);
+		windowMiFieldRhombus.setSize(400, 400);
+		windowMiFieldRhombus.setTitle("Obliczanie pola Rombu");
+		windowMiFieldRhombus.setDefaultCloseOperation(1);
+		windowMiFieldRhombus.setVisible(true);	
 		
-		JFrame oknoMiOPoleRomb = new JFrame();
-		oknoMiOPoleRomb.setLayout(null);
-		oknoMiOPoleRomb.setSize(400, 400);
-		oknoMiOPoleRomb.setTitle("Obliczanie pola Rombu");
-		oknoMiOPoleRomb.setDefaultCloseOperation(1);
-		oknoMiOPoleRomb.setVisible(true);	
+		jlHeading = new JLabel("Aby obliczyć pole rombu podaj długość boku a oraz wysokość");
+		jlHeading.setBounds(20, 10, 400, 20);
+		windowMiFieldRhombus.add(jlHeading);	
 		
-
-		jlNagłówek = new JLabel("Aby obliczyć pole rombu podaj długość boku a oraz wysokość");
-		jlNagłówek.setBounds(20, 10, 400, 20);
-		oknoMiOPoleRomb.add(jlNagłówek);	
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(50, 60, 70, 40);
+		windowMiFieldRhombus.add(jtfValue1);
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(50, 60, 70, 40);
-		oknoMiOPoleRomb.add(jtfWartość1);
+		jtfValue2 = new JTextField();
+		jtfValue2.setBounds(150, 60, 70, 40);
+		windowMiFieldRhombus.add(jtfValue2);
 		
-		jtfWartość2 = new JTextField();
-		jtfWartość2.setBounds(150, 60, 70, 40);
-		oknoMiOPoleRomb.add(jtfWartość2);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiFieldRhombus.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-	
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiFieldRhombus.add(jlResult);
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiOPoleRomb.add(jbOblicz);
-		jbOblicz.addActionListener(this);
-		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiOPoleRomb.add(jlWynik);
-		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiOPoleRomb.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiFieldRhombus.add(jtfResult);
 		
 	}
-	
 	
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
 		Object z = e.getSource();
 		
-		
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfWartość1.getText());
-			double b = Double.parseDouble(jtfWartość2.getText());
+			double a = Double.parseDouble(jtfValue1.getText());
+			double b = Double.parseDouble(jtfValue2.getText());
 			
-			CalculationFieldRhombus obiekt = new CalculationFieldRhombus(a,b);
-			String rozwiązanie = obiekt.rozwiązaniePoleRomb();
-			jtfWynik.setText(rozwiązanie);
+			CalculationFieldRhombus result = new CalculationFieldRhombus(a,b);
+			String resultFinal = result.rozwiązaniePoleRomb();
+			jtfResult.setText(resultFinal);
 			
 			
 		}
-
-		
 	}
-
-
-
 }

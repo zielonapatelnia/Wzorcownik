@@ -17,10 +17,6 @@ public class LayoutCircuitQuadrat implements ActionListener {
 
 	public LayoutCircuitQuadrat()
 	{
-		
-		
-	
-		
 		JFrame windowMiCircuitQuadrat = new JFrame();
 		windowMiCircuitQuadrat.setLayout(null);
 		windowMiCircuitQuadrat.setSize(400, 400);
@@ -51,11 +47,9 @@ public class LayoutCircuitQuadrat implements ActionListener {
 		windowMiCircuitQuadrat.add(jtfResult);
 	}
 	
-	
-	
-	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 		Object z = e.getSource();
 		
 		if (z == jbCalculate)
@@ -65,13 +59,5 @@ public class LayoutCircuitQuadrat implements ActionListener {
 			String resultFinal = result.rozwiązanieObwódKwadrat();
 			jtfResult.setText(resultFinal);
 		}
-		
-		
 	}
-
-
-
-
-	
-
 }

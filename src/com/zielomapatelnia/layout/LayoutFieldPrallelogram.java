@@ -11,74 +11,63 @@ import com.zielonapatelnia.math.CalculationFieldParallelogram;
 
 public class LayoutFieldPrallelogram implements ActionListener {
 	
-	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1, jtfWartość2;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1, jtfValue2;
 	
 	public LayoutFieldPrallelogram()
 	{
-	
 		
-		JFrame oknoMiPoleRównoległobok = new JFrame();
-		oknoMiPoleRównoległobok.setLayout(null);
-		oknoMiPoleRównoległobok.setSize(400, 400);
-		oknoMiPoleRównoległobok.setTitle("Obliczanie pola równoległoboku");
-		oknoMiPoleRównoległobok.setDefaultCloseOperation(1);
-		oknoMiPoleRównoległobok.setVisible(true);	
+		JFrame windowMiFieldPrallelogram = new JFrame();
+		windowMiFieldPrallelogram.setLayout(null);
+		windowMiFieldPrallelogram.setSize(400, 400);
+		windowMiFieldPrallelogram.setTitle("Obliczanie pola równoległoboku");
+		windowMiFieldPrallelogram.setDefaultCloseOperation(1);
+		windowMiFieldPrallelogram.setVisible(true);	
 		
-		jlNagłówek = new JLabel("Aby obliczyć pole równole©łoboku podaj długość boku a oraz wysokość");
-		jlNagłówek.setBounds(20, 10, 400, 20);
-		oknoMiPoleRównoległobok.add(jlNagłówek);	
+		jlHeading = new JLabel("Aby obliczyć pole równole©łoboku podaj długość boku a oraz wysokość");
+		jlHeading.setBounds(20, 10, 400, 20);
+		windowMiFieldPrallelogram.add(jlHeading);	
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(50, 60, 70, 40);
-		oknoMiPoleRównoległobok.add(jtfWartość1);
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(50, 60, 70, 40);
+		windowMiFieldPrallelogram.add(jtfValue1);
 		
-		jtfWartość2 = new JTextField();
-		jtfWartość2.setBounds(150, 60, 70, 40);
-		oknoMiPoleRównoległobok.add(jtfWartość2);
+		jtfValue2 = new JTextField();
+		jtfValue2.setBounds(150, 60, 70, 40);
+		windowMiFieldPrallelogram.add(jtfValue2);
 		
-	
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiFieldPrallelogram.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiPoleRównoległobok.add(jbOblicz);
-		jbOblicz.addActionListener(this);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiFieldPrallelogram.add(jlResult);
 		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiPoleRównoległobok.add(jlWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiFieldPrallelogram.add(jtfResult);
 		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiPoleRównoległobok.add(jtfWynik);
 	}
 	
 	
-
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
 
 		Object z = e.getSource();
 		
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double a = Double.parseDouble(jtfWartość1.getText());
-			double b = Double.parseDouble(jtfWartość2.getText());
+			double a = Double.parseDouble(jtfValue1.getText());
+			double b = Double.parseDouble(jtfValue2.getText());
 			
 			CalculationFieldParallelogram obiekt = new CalculationFieldParallelogram(a,b);
 			String rozwiązanie = obiekt.rozwiązaniePoleRównoległobok();
-			jtfWynik.setText(rozwiązanie);
-			
-			
+			jtfResult.setText(rozwiązanie);
 			
 		}
-		
-		
 	}
-
-
-
 }

@@ -4,7 +4,7 @@ public class CalculationFieldTrapeze
 {
 	double a, b,c;
 	
-	CalculationFieldTrapeze(double a,double b,double c)
+	public CalculationFieldTrapeze(double a,double b,double c)
 	{
 		this.a = a;
 		this.b = b;

@@ -18,43 +18,36 @@ public class LayoutCircuitRhombus implements ActionListener {
 	public LayoutCircuitRhombus()
 	{
 		
-		
-		JFrame oknoMiObwódRomb = new JFrame();
-		oknoMiObwódRomb.setLayout(null);
-		oknoMiObwódRomb.setSize(400, 400);
-		oknoMiObwódRomb.setTitle("Obliczanie obwodu Rombu");
-		oknoMiObwódRomb.setDefaultCloseOperation(1);
-		oknoMiObwódRomb.setVisible(true);
-		
+		JFrame windowMiCircuitRhombus = new JFrame();
+		windowMiCircuitRhombus.setLayout(null);
+		windowMiCircuitRhombus.setSize(400, 400);
+		windowMiCircuitRhombus.setTitle("Obliczanie obwodu Rombu");
+		windowMiCircuitRhombus.setDefaultCloseOperation(1);
+		windowMiCircuitRhombus.setVisible(true);
 		
 		jlHeading = new JLabel("Aby obliczyć pole rombu podaj długość boku a");
 		jlHeading.setBounds(20, 10, 400, 20);
-		oknoMiObwódRomb.add(jlHeading);	
+		windowMiCircuitRhombus.add(jlHeading);	
 		
 		jtfValue1 = new JTextField();
 		jtfValue1.setBounds(50, 60, 70, 40);
-		oknoMiObwódRomb.add(jtfValue1);
-		
-	
-		
-	
+		windowMiCircuitRhombus.add(jtfValue1);
 		
 		jbCalculate = new JButton("Oblicz !");
 		jbCalculate.setBounds(50, 150, 300, 40);
-		oknoMiObwódRomb.add(jbCalculate);
+		windowMiCircuitRhombus.add(jbCalculate);
 		jbCalculate.addActionListener(this);
 		
 		jlResult = new JLabel("Wynik");
 		jlResult.setBounds(180, 210, 100, 20);
-		oknoMiObwódRomb.add(jlResult);
+		windowMiCircuitRhombus.add(jlResult);
 		
 		jtfResult = new JTextField();
 		jtfResult.setBounds(150, 260, 100, 40);
-		oknoMiObwódRomb.add(jtfResult);
+		windowMiCircuitRhombus.add(jtfResult);
+		
 	}
 
-	
-	
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
@@ -70,10 +63,5 @@ public class LayoutCircuitRhombus implements ActionListener {
 				
 				
 			}
-		
 	}
-
-
-
-
 }

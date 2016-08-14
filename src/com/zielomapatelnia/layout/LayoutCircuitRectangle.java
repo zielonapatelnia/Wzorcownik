@@ -18,7 +18,6 @@ public class LayoutCircuitRectangle implements ActionListener {
 	public LayoutCircuitRectangle()
 	{
 		
-		
 		JFrame windowMiCircuitRectangle = new JFrame();
 		windowMiCircuitRectangle.setLayout(null);
 		windowMiCircuitRectangle.setSize(400, 400);
@@ -56,7 +55,8 @@ public class LayoutCircuitRectangle implements ActionListener {
 	
 	
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 			Object z = e.getSource();
 			
 			if (z == jbCalculate)
@@ -70,11 +70,5 @@ public class LayoutCircuitRectangle implements ActionListener {
 				
 				
 			}
-
-		
 	}
-
-
-	
-
 }

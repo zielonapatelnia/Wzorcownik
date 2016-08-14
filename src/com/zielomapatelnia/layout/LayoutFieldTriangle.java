@@ -12,70 +12,59 @@ import com.zielonapatelnia.math.CalculationFieldTriangle;
 
 public class LayoutFieldTriangle implements ActionListener{
 	
-	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1;
 	
 	public LayoutFieldTriangle()
 	{
 		
 		
-		JFrame oknoMiPoleTrójkąt = new JFrame();
-		oknoMiPoleTrójkąt.setLayout(null);
-		oknoMiPoleTrójkąt.setSize(400, 400);
-		oknoMiPoleTrójkąt.setTitle("Obliczanie pola trójkąta równobocznego");
-		oknoMiPoleTrójkąt.setDefaultCloseOperation(1);
-		oknoMiPoleTrójkąt.setVisible(true);	
+		JFrame windowMiFieldTriangle = new JFrame();
+		windowMiFieldTriangle.setLayout(null);
+		windowMiFieldTriangle.setSize(400, 400);
+		windowMiFieldTriangle.setTitle("Obliczanie pola trójkąta równobocznego");
+		windowMiFieldTriangle.setDefaultCloseOperation(1);
+		windowMiFieldTriangle.setVisible(true);	
 		
+		jlHeading = new JLabel("Aby obliczyć obwód trójkąta podaj długość boku a w cm");
+		jlHeading.setBounds(20, 10, 380, 20);
+		windowMiFieldTriangle.add(jlHeading);	
 		
-		jlNagłówek = new JLabel("Aby obliczyć obwód trójkąta podaj długość boku a w cm");
-		jlNagłówek.setBounds(20, 10, 380, 20);
-		oknoMiPoleTrójkąt.add(jlNagłówek);	
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(125, 60, 70, 40);
+		windowMiFieldTriangle.add(jtfValue1);
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(125, 60, 70, 40);
-		oknoMiPoleTrójkąt.add(jtfWartość1);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiFieldTriangle.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiFieldTriangle.add(jlResult);
 		
-		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiPoleTrójkąt.add(jbOblicz);
-		jbOblicz.addActionListener(this);
-		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiPoleTrójkąt.add(jlWynik);
-		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiPoleTrójkąt.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiFieldTriangle.add(jtfResult);
 		
 	}
 	
 	
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 		Object z = e.getSource();
 		
-		if (z == jbOblicz)
+		if (z == jbCalculate)
 		{
-			double b = Double.parseDouble(jtfWartość1.getText());
+			double b = Double.parseDouble(jtfValue1.getText());
 			
 			CalculationFieldTriangle obiekt = new CalculationFieldTriangle(b);
 			String rozwiązanie = obiekt.rozwiązaniePoleTrójkąt();
-			jtfWynik.setText(rozwiązanie);
-			
-			
+			jtfResult.setText(rozwiązanie);
 			
 		}
-		
-		
-
-		
 	}
-
-
 }

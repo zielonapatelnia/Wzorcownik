@@ -12,73 +12,65 @@ import com.zielonapatelnia.math.CalculationCircuitTriangle;
 
 public class LayoutCircuitTriangle implements ActionListener {
 	
-	
-	JLabel jlNagłówek, jlWynik;
-	JButton jbOblicz;
-	JTextField jtfWynik, jtfWartość1, jtfWartość2, jtfWartość3;
+	JLabel jlHeading, jlResult;
+	JButton jbCalculate;
+	JTextField jtfResult, jtfValue1, jtfValue2, jtfValue3;
 	
 	public LayoutCircuitTriangle()
 	{
 
+		JFrame windowMiCircuitTriangle = new JFrame();
+		windowMiCircuitTriangle.setLayout(null);
+		windowMiCircuitTriangle.setSize(400, 400);
+		windowMiCircuitTriangle.setTitle("Obliczanie obwodu trójkąta");
+		windowMiCircuitTriangle.setDefaultCloseOperation(1);
+		windowMiCircuitTriangle.setVisible(true);	
 		
+		jlHeading = new JLabel("Aby obliczyć obwód trójkąta podaj długość boku a,b i c w cm");
+		jlHeading.setBounds(20, 10, 400, 20);
+		windowMiCircuitTriangle.add(jlHeading);	
 		
-		JFrame oknoMiObwódTrójkąt = new JFrame();
-		oknoMiObwódTrójkąt.setLayout(null);
-		oknoMiObwódTrójkąt.setSize(400, 400);
-		oknoMiObwódTrójkąt.setTitle("Obliczanie obwodu trójkąta");
-		oknoMiObwódTrójkąt.setDefaultCloseOperation(1);
-		oknoMiObwódTrójkąt.setVisible(true);	
+		jtfValue1 = new JTextField();
+		jtfValue1.setBounds(50, 60, 70, 40);
+		windowMiCircuitTriangle.add(jtfValue1);
 		
-		jlNagłówek = new JLabel("Aby obliczyć obwód trójkąta podaj długość boku a,b i c w cm");
-		jlNagłówek.setBounds(20, 10, 400, 20);
-		oknoMiObwódTrójkąt.add(jlNagłówek);	
+		jtfValue2 = new JTextField();
+		jtfValue2.setBounds(150, 60, 70, 40);
+		windowMiCircuitTriangle.add(jtfValue2);
 		
-		jtfWartość1 = new JTextField();
-		jtfWartość1.setBounds(50, 60, 70, 40);
-		oknoMiObwódTrójkąt.add(jtfWartość1);
+		jtfValue3 = new JTextField();
+		jtfValue3.setBounds(250, 60, 70, 40);
+		windowMiCircuitTriangle.add(jtfValue3);
 		
-		jtfWartość2 = new JTextField();
-		jtfWartość2.setBounds(150, 60, 70, 40);
-		oknoMiObwódTrójkąt.add(jtfWartość2);
+		jbCalculate = new JButton("Oblicz !");
+		jbCalculate.setBounds(50, 150, 300, 40);
+		windowMiCircuitTriangle.add(jbCalculate);
+		jbCalculate.addActionListener(this);
 		
-		jtfWartość3 = new JTextField();
-		jtfWartość3.setBounds(250, 60, 70, 40);
-		oknoMiObwódTrójkąt.add(jtfWartość3);
+		jlResult = new JLabel("Wynik");
+		jlResult.setBounds(180, 210, 100, 20);
+		windowMiCircuitTriangle.add(jlResult);
 		
-		jbOblicz = new JButton("Oblicz !");
-		jbOblicz.setBounds(50, 150, 300, 40);
-		oknoMiObwódTrójkąt.add(jbOblicz);
-		jbOblicz.addActionListener(this);
-		
-		jlWynik = new JLabel("Wynik");
-		jlWynik.setBounds(180, 210, 100, 20);
-		oknoMiObwódTrójkąt.add(jlWynik);
-		
-		jtfWynik = new JTextField();
-		jtfWynik.setBounds(150, 260, 100, 40);
-		oknoMiObwódTrójkąt.add(jtfWynik);
+		jtfResult = new JTextField();
+		jtfResult.setBounds(150, 260, 100, 40);
+		windowMiCircuitTriangle.add(jtfResult);
 		
 	}
 	
-	
-	
-
 	@Override
-	public void actionPerformed(ActionEvent e) {
+	public void actionPerformed(ActionEvent e) 
+	{
 			Object z = e.getSource();
 			
-			if (z == jbOblicz)
+			if (z == jbCalculate)
 			{
-				double a = Double.parseDouble(jtfWartość1.getText());
-				double b = Double.parseDouble(jtfWartość2.getText());
-				double c = Double.parseDouble(jtfWartość3.getText());
+				double a = Double.parseDouble(jtfValue1.getText());
+				double b = Double.parseDouble(jtfValue2.getText());
+				double c = Double.parseDouble(jtfValue3.getText());
 				
 				CalculationCircuitTriangle obiekt = new CalculationCircuitTriangle(a,b,c);
 				String rozwiązanie = obiekt.obliczanieObwódTrójkąt();
-				jtfWynik.setText(rozwiązanie);
+				jtfResult.setText(rozwiązanie);
 			}
 	}
-
-
-
 }
